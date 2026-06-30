@@ -1,0 +1,2642 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日用百货素材双周报 · 6月下半月 · 参考页风格版</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --bg-dark: #0a0a0f;
+    --bg-card: #151521;
+    --bg-card-hover: #1a1a2e;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0b0;
+    --text-muted: #6c6c7c;
+    --border-color: #2a2a3e;
+    --accent-purple: #8b5cf6;
+    --accent-blue: #3b82f6;
+    --accent-green: #10b981;
+    --accent-orange: #f59e0b;
+    --accent-red: #ef4444;
+    --accent-pink: #ec4899;
+    --accent-gold: #fbbf24;
+    --accent-cyan: #06b6d4;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.container { max-width: 1700px; margin: 0 auto; padding: 24px; }
+
+/* ===== Hero 顶部 ===== */
+.hero {
+    background: linear-gradient(180deg, rgba(15, 15, 25, 0.95) 0%, rgba(10, 10, 15, 0.9) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 40px 32px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+    pointer-events: none;
+}
+.hero-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+}
+.logo-section { display: flex; align-items: center; gap: 16px; }
+.logo-icon {
+    width: 56px; height: 56px;
+    background: var(--primary-gradient);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+.logo-text h1 {
+    font-size: 26px; font-weight: 800;
+    background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 50%, #667eea 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.logo-text span { font-size: 13px; color: var(--text-muted); }
+
+.kpi-badges { display: flex; gap: 12px; flex-wrap: wrap; }
+.kpi-badge {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 12px 18px;
+    text-align: center;
+    min-width: 88px;
+}
+.kpi-badge .v { font-size: 22px; font-weight: 800; color: var(--accent-gold); line-height: 1; }
+.kpi-badge .l { font-size: 11px; color: var(--text-muted); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* ===== Filter Bar ===== */
+.filter-bar {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.filter-group { display: flex; align-items: center; gap: 8px; }
+.filter-label { font-size: 13px; color: var(--text-muted); font-weight: 500; }
+.filter-select {
+    background: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 8px 32px 8px 12px;
+    color: var(--text-primary);
+    font-size: 13px;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23a0a0b0' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    min-width: 130px;
+    font-family: inherit;
+}
+.filter-select:focus { outline: none; border-color: var(--accent-purple); }
+.stats-bar { margin-left: auto; display: flex; gap: 20px; }
+.stat-item { text-align: center; }
+.stat-value { font-size: 20px; font-weight: 700; color: var(--accent-gold); }
+.stat-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* ===== Insight Section ===== */
+.insight-section {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(236, 72, 153, 0.05) 100%);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+}
+.insight-section::before {
+    content: '';
+    position: absolute;
+    top: -50px; right: -50px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+.insight-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 20px; position: relative;
+}
+.insight-title { display: flex; align-items: center; gap: 12px; }
+.insight-icon { font-size: 28px; }
+.insight-title h2 {
+    font-size: 22px; font-weight: 700;
+    background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.insight-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    position: relative;
+}
+.insight-point {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: all 0.3s;
+}
+.insight-point:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-purple);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.15);
+}
+.insight-point-num {
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    width: 28px; height: 28px;
+    background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+    border-radius: 50%;
+    font-size: 13px; font-weight: 700; color: white;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.insight-point-title {
+    font-size: 15px; font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+.insight-point-desc {
+    font-size: 13px; line-height: 1.7;
+    color: var(--text-secondary);
+}
+.insight-point-desc .hl {
+    color: var(--accent-gold);
+    font-weight: 600;
+}
+
+/* ===== Benchmark Section ===== */
+.benchmark-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 24px;
+}
+.benchmark-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 20px; flex-wrap: wrap; gap: 12px;
+}
+.benchmark-title { display: flex; align-items: center; gap: 12px; }
+.benchmark-icon { font-size: 26px; }
+.benchmark-title h2 { font-size: 20px; font-weight: 700; color: var(--text-primary); }
+.benchmark-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 16px;
+}
+.benchmark-card {
+    background: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 20px 24px;
+    transition: all 0.3s;
+}
+.benchmark-card:hover { transform: translateY(-2px); }
+.benchmark-card.gaoxiao { border-left: 4px solid var(--accent-blue); }
+.benchmark-card.gaoxiao:hover { box-shadow: 0 8px 20px rgba(59, 130, 246, 0.2); }
+.benchmark-card.feigaoxiao { border-left: 4px solid var(--accent-purple); }
+.benchmark-card.feigaoxiao:hover { box-shadow: 0 8px 20px rgba(139, 92, 246, 0.2); }
+.benchmark-card-header { margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; }
+.benchmark-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(59, 130, 246, 0.15);
+    color: var(--accent-blue);
+    border-radius: 6px;
+    font-size: 13px; font-weight: 600;
+}
+.benchmark-card.feigaoxiao .benchmark-tag {
+    background: rgba(139, 92, 246, 0.15);
+    color: var(--accent-purple);
+}
+.benchmark-count {
+    font-size: 12px; color: var(--text-muted);
+}
+.benchmark-metrics {
+    display: flex; align-items: center; justify-content: space-around;
+}
+.benchmark-metric {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 4px; flex: 1;
+}
+.benchmark-metric-label {
+    font-size: 12px; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.5px;
+}
+.benchmark-metric-value {
+    font-size: 28px; font-weight: 700;
+    color: var(--accent-gold);
+    line-height: 1;
+}
+.benchmark-metric-value small { font-size: 14px; opacity: 0.7; font-weight: 500; margin-left: 2px; }
+.benchmark-metric-divider { width: 1px; height: 40px; background: var(--border-color); }
+
+/* ===== Cards Section ===== */
+.cards-section { margin-top: 32px; }
+.section-title-bar {
+    display: flex; align-items: center;
+    margin-bottom: 20px; padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+.section-title-bar h2 {
+    font-size: 22px; font-weight: 700; color: var(--text-primary);
+    display: flex; align-items: center; gap: 10px;
+}
+.section-emoji { font-size: 26px; }
+.section-count {
+    margin-left: auto;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 12px; color: var(--text-muted);
+}
+
+.analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+@media (max-width: 1100px) {
+    .analysis-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 700px) {
+    .analysis-grid { grid-template-columns: 1fr; }
+}
+
+.analysis-card {
+    background: var(--bg-card);
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex; flex-direction: column;
+}
+.analysis-card.hidden { display: none; }
+.analysis-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-purple);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 12px; flex-wrap: wrap;
+}
+.card-rank { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; }
+.rank-badge {
+    width: 36px; height: 36px;
+    background: var(--primary-gradient);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 16px; flex-shrink: 0;
+    color: white;
+}
+.card-info { flex: 1; min-width: 0; }
+.card-info h3 {
+    font-size: 15px; font-weight: 600;
+    margin-bottom: 4px;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.card-meta { display: flex; gap: 8px; font-size: 11px; color: var(--text-muted); flex-wrap: wrap; }
+
+.brand-tag {
+    display: none;  /* 客户简称不显示 */
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 11px; font-weight: 600;
+    color: white;
+    flex-shrink: 0;
+}
+
+.metrics-bar {
+    display: flex; align-items: center; justify-content: space-around;
+    padding: 14px 20px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(59, 130, 246, 0.08) 100%);
+    border-bottom: 1px solid var(--border-color);
+}
+.metric-item {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 2px; flex: 1;
+}
+.metric-label {
+    font-size: 11px; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500;
+}
+.metric-value {
+    font-size: 18px; font-weight: 700;
+    color: var(--accent-gold);
+    line-height: 1.2;
+}
+.metric-value small { font-size: 11px; opacity: 0.7; margin-left: 2px; }
+.metric-divider { width: 1px; height: 32px; background: var(--border-color); }
+
+.card-frames {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+}
+.card-frames .frame-img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+.card-frames .frame-img.active { opacity: 1; }
+.card-frames .frame-timestamp {
+    position: absolute; bottom: 8px; right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.card-frames .frame-counter {
+    position: absolute; top: 8px; left: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--accent-gold);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.card-frames .frame-video {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: contain;
+    background: #000;
+    display: none;
+    z-index: 2;
+}
+.card-frames.playing .frame-video { display: block; }
+.card-frames.playing .frame-img { display: none; }
+.card-frames .play-btn {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    border-radius: 50px;
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex; align-items: center; gap: 8px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 18px rgba(139, 92, 246, 0.45);
+}
+.card-frames .play-btn:hover {
+    background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-blue) 100%);
+    border-color: white;
+    transform: translate(-50%, -50%) scale(1.06);
+    box-shadow: 0 6px 24px rgba(139, 92, 246, 0.7);
+}
+.card-frames .play-btn .play-icon {
+    width: 22px; height: 22px;
+    background: white;
+    color: var(--accent-purple);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px;
+    padding-left: 2px;
+}
+.card-frames .close-btn {
+    position: absolute;
+    top: 10px; right: 10px;
+    z-index: 6;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    width: 30px; height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    display: none;
+    align-items: center; justify-content: center;
+    line-height: 1;
+}
+.card-frames.playing .close-btn { display: flex; }
+.card-frames.playing .play-btn { display: none; }
+.card-frames.playing .frame-counter,
+.card-frames.playing .frame-timestamp { display: none; }
+.card-frames .video-tip {
+    position: absolute; bottom: 8px; left: 8px;
+    background: rgba(251, 191, 36, 0.9);
+    color: #1a1a2e;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    z-index: 4;
+    pointer-events: none;
+}
+
+.card-body { padding: 20px; flex: 1; }
+.analysis-section { margin-bottom: 18px; }
+.analysis-section:last-child { margin-bottom: 0; }
+.section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.section-icon {
+    width: 28px; height: 28px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; color: var(--accent-purple);
+    flex-shrink: 0;
+}
+.section-title { font-size: 13px; font-weight: 600; color: var(--accent-purple); }
+.section-content {
+    font-size: 13px; color: var(--text-secondary);
+    line-height: 1.7;
+    padding-left: 36px;
+}
+
+.sop-segment {
+    background: var(--bg-dark);
+    border-left: 3px solid var(--accent-purple);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    margin-left: 36px;
+}
+.sop-segment .seg-label {
+    font-size: 11px; font-weight: 700; color: var(--accent-purple);
+    text-transform: uppercase; letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+.sop-segment .seg-text {
+    font-size: 12px; color: var(--text-secondary);
+    line-height: 1.6;
+}
+.sop-segment.hook { border-left-color: var(--accent-pink); }
+.sop-segment.hook .seg-label { color: var(--accent-pink); }
+.sop-segment.pain { border-left-color: var(--accent-orange); }
+.sop-segment.pain .seg-label { color: var(--accent-orange); }
+.sop-segment.solution { border-left-color: var(--accent-green); }
+.sop-segment.solution .seg-label { color: var(--accent-green); }
+.sop-segment.demo { border-left-color: var(--accent-blue); }
+.sop-segment.demo .seg-label { color: var(--accent-blue); }
+.sop-segment.end { border-left-color: var(--accent-gold); }
+.sop-segment.end .seg-label { color: var(--accent-gold); }
+
+.flow-structure {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    align-items: center;
+    padding-left: 36px;
+}
+.flow-step {
+    background: var(--bg-dark);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 11px;
+    color: var(--text-secondary);
+    display: flex; align-items: center; gap: 4px;
+}
+.flow-arrow { color: var(--accent-purple); font-size: 11px; }
+.flow-step.emphasis {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);
+    color: var(--accent-purple);
+    font-weight: 600;
+}
+
+.tags-container {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    padding-left: 36px;
+}
+.tag {
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 11px; font-weight: 500;
+    background: rgba(139, 92, 246, 0.15);
+    color: var(--accent-purple);
+}
+.tag.gaoxiao { background: rgba(245, 158, 11, 0.15); color: var(--accent-orange); }
+.tag.feigaoxiao { background: rgba(59, 130, 246, 0.15); color: var(--accent-blue); }
+
+/* ===== Footer ===== */
+.footer {
+    margin-top: 32px;
+    padding: 24px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 12px;
+    border-top: 1px solid var(--border-color);
+}
+
+/* 客户 8 色渐变（应用在 brand-tag） */
+.brand-蜗艾蜗家 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.brand-海大 { background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%); }
+.brand-植物大师 { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
+.brand-古宛堂 { background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); }
+.brand-初代 { background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); }
+.brand-好视力 { background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); }
+.brand-内蒙古敦布仁钦 { background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%); }
+.brand-郑州市尘与萤 { background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%); }
+
+.type-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 11px; font-weight: 600;
+    color: white;
+}
+.type-产品展示 { background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); }
+.type-场景演绎 { background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); }
+.type-知识科普 { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
+.type-工厂溯源 { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
+.type-明星代言 { background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%); }
+</style>
+</head>
+<body>
+    <div class="container">
+        
+<section class="hero">
+    <div class="hero-row">
+        <div class="logo-section">
+            <div class="logo-icon">🛒</div>
+            <div class="logo-text">
+                <h1>日用百货素材双周报</h1>
+                <span>Daily-use Goods · 6月下半月 · 黄金5段式 × 创意SOP</span>
+            </div>
+        </div>
+        <div class="kpi-badges">
+            <div class="kpi-badge"><div class="v">19</div><div class="l">视频</div></div>
+            <div class="kpi-badge"><div class="v">8</div><div class="l">商品类目</div></div>
+            <div class="kpi-badge"><div class="v">2.5%</div><div class="l">平均CTR</div></div>
+            <div class="kpi-badge"><div class="v">13.4%</div><div class="l">平均CVR</div></div>
+            <div class="kpi-badge"><div class="v">1.68</div><div class="l">平均ROI</div></div>
+        </div>
+    </div>
+</section>
+
+        
+<section class="filter-bar">
+    <div class="filter-group">
+        <span class="filter-label">🏷️ 商品类目</span>
+        <select class="filter-select" id="filterCust" onchange="applyFilter()">
+            <option value="">全部类目</option>
+            <option value="蜗艾蜗家">艾灸艾香</option><option value="海大">折叠泡脚桶</option><option value="植物大师">肚脐贴/足贴</option><option value="古宛堂">姜黄舒足贴</option><option value="初代">肚脐贴</option><option value="好视力">护眼贴</option><option value="内蒙古敦布仁钦">蒙药艾草</option><option value="郑州市尘与萤">文创摆件</option>
+        </select>
+    </div>
+    <div class="filter-group">
+        <span class="filter-label">🎬 素材类型</span>
+        <select class="filter-select" id="filterType" onchange="applyFilter()">
+            <option value="">全部类型</option>
+            <option value="产品展示">产品展示</option><option value="场景演绎">场景演绎</option><option value="工厂溯源">工厂溯源</option><option value="明星代言">明星代言</option><option value="知识科普">知识科普</option>
+        </select>
+    </div>
+    <div class="filter-group">
+        <span class="filter-label">👥 转化人群</span>
+        <select class="filter-select" id="filterAud" onchange="applyFilter()">
+            <option value="">全部人群</option>
+            <option value="上班族">上班族</option><option value="家庭用户">家庭用户</option><option value="银发族">银发族</option><option value="带娃妈妈">带娃妈妈</option><option value="养生一族">养生一族</option>
+        </select>
+    </div>
+    <div class="stats-bar">
+        <div class="stat-item"><div class="stat-value" id="totalCount">19</div><div class="stat-label">总素材</div></div>
+        <div class="stat-item"><div class="stat-value" id="filterCount">19</div><div class="stat-label">筛选结果</div></div>
+    </div>
+</section>
+
+        
+<section class="insight-section">
+    <div class="insight-header">
+        <div class="insight-title">
+            <span class="insight-icon">🔥</span>
+            <h2>日用百货 Top 跑量素材共性特征</h2>
+        </div>
+    </div>
+    <div class="insight-points">
+        
+<div class="insight-point">
+    <div class="insight-point-title">
+        <span class="insight-point-num">1</span>钩子：具象数字冲击
+    </div>
+    <div class="insight-point-desc"><span class='hl'>108支/9味/4盒/27支</span>等具体数字在 0-3s 钩子集中爆发，CTR 普遍 <span class='hl'>&gt;2.0%</span>，验证数字锚点对点击率的杠杆效应。</div>
+</div>
+<div class="insight-point">
+    <div class="insight-point-title">
+        <span class="insight-point-num">2</span>痛点：季节+人群双重锚定
+    </div>
+    <div class="insight-point-desc">三伏天/经期/失眠/眼疲劳/肚子鼓鼓 五大场景钩子精准命中目标人群，CVR 显著高于平均 13.44%，其中初代 20.16% 居首。</div>
+</div>
+<div class="insight-point">
+    <div class="insight-point-title">
+        <span class="insight-point-num">3</span>解药：工厂溯源+老板娘 IP
+    </div>
+    <div class="insight-point-desc">蜗艾蜗家 / 内蒙古敦布仁钦 老板娘/老板亲自喊话 + 工厂仓库发货镜头，<span class='hl'>ROI 最高 2.76</span>，信任成本最低。</div>
+</div>
+<div class="insight-point">
+    <div class="insight-point-title">
+        <span class="insight-point-num">4</span>演示：多场景多模特
+    </div>
+    <div class="insight-point-desc">瑜伽垫/办公桌/卧室/差旅/茶桌 五类场景切换 + 真人实证，转化率较单场景高出 1.5 倍，覆盖面更广。</div>
+</div>
+<div class="insight-point">
+    <div class="insight-point-title">
+        <span class="insight-point-num">5</span>黄金 5 段式：节奏感闭环
+    </div>
+    <div class="insight-point-desc"><span class='hl'>钩子→痛点→解药→演示→收尾</span>五段式节奏感是日用百货完播率最优结构，9 段式被验证有效 8 次（占 42%）。</div>
+</div>
+<div class="insight-point">
+    <div class="insight-point-title">
+        <span class="insight-point-num">6</span>收尾：试用承诺 CTA
+    </div>
+    <div class="insight-point-desc">"好用就留下 / 不满意退货 / 7 天无理由" 等试用承诺型 CTA，决策门槛骤降，蜗艾蜗家/古宛堂 ROI 1.7+ 头部客户均采用。</div>
+</div>
+<div class="insight-point">
+    <div class="insight-point-title">
+        <span class="insight-point-num">7</span>避坑：古装戏服/特效堆砌
+    </div>
+    <div class="insight-point-desc"><span class='hl'>CPM &gt; 240 但 CVR 偏低</span>（如古宛堂 CPM 237 / 初代 CPM 244），过度包装/特效会拉高曝光成本，转化未同步拉升。</div>
+</div>
+    </div>
+</section>
+
+        
+<section class="benchmark-section">
+    <div class="benchmark-header">
+        <div class="benchmark-title">
+            <span class="benchmark-icon">📊</span>
+            <h2>日用百货品类 Benchmark</h2>
+        </div>
+        <div style="font-size:12px;color:var(--text-muted);">基于 19 视频实测统计 · 非行业大盘</div>
+    </div>
+    <div class="benchmark-grid">
+        <div class="benchmark-card gaoxiao">
+            <div class="benchmark-card-header">
+                <span class="benchmark-tag">📊 日用百货全品类</span>
+                <span class="benchmark-count">19 条素材</span>
+            </div>
+            <div class="benchmark-metrics">
+                <div class="benchmark-metric">
+                    <span class="benchmark-metric-label">CTR</span>
+                    <span class="benchmark-metric-value">2.44<small>%</small></span>
+                </div>
+                <div class="benchmark-metric-divider"></div>
+                <div class="benchmark-metric">
+                    <span class="benchmark-metric-label">CVR</span>
+                    <span class="benchmark-metric-value">13.56<small>%</small></span>
+                </div>
+                <div class="benchmark-metric-divider"></div>
+                <div class="benchmark-metric">
+                    <span class="benchmark-metric-label">ROI</span>
+                    <span class="benchmark-metric-value">1.71</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        
+<section class="cards-section">
+    <div class="section-title-bar">
+        <h2><span class="section-emoji">🎬</span> Top 跑量素材逐个拆解</h2>
+        <div class="section-count">按 ROI 降序 · 共 19 条</div>
+    </div>
+    <div class="analysis-grid" id="analysisGrid">
+        
+<article class="analysis-card" data-md5="ae50654efc" data-brand="蜗艾蜗家" data-type="产品展示">
+    <div class="card-header">
+        <div class="card-rank">
+            <div class="rank-badge">#1</div>
+            <div class="card-info">
+                <h3 title="九味香材合和的艾合">九味香材合和的艾合</h3>
+                <div class="card-meta">
+                    <span>📊 ROI <strong style="color:var(--accent-gold)">2.76</strong></span>
+                    <span>· 蒙派老板娘深夜制香的情感线叙事，信任符拉满。</span>
+                </div>
+            </div>
+        </div>
+        <span class="brand-tag brand-蜗艾蜗家" style="display:none">蜗艾蜗家</span>
+        <span class="type-tag type-产品展示">产品展示</span>
+    </div>
+    <div class="metrics-bar">
+        <div class="metric-item">
+            <span class="metric-label">CTR</span>
+            <span class="metric-value">2.21<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CVR</span>
+            <span class="metric-value">11.37<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">ROI</span>
+            <span class="metric-value">2.76</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CPM</span>
+            <span class="metric-value">¥91</span>
+        </div>
+    </div>
+    
+<div class="card-frames" data-md5="ae50654efc">
+    <img class="frame-img active" data-idx="0" src="frames/ae50654efc/ae50654efc_1_t0.5s.jpg" alt="frame-1"><img class="frame-img" data-idx="1" src="frames/ae50654efc/ae50654efc_2_t3.0s.jpg" alt="frame-2"><img class="frame-img" data-idx="2" src="frames/ae50654efc/ae50654efc_3_t9.2s.jpg" alt="frame-3"><img class="frame-img" data-idx="3" src="frames/ae50654efc/ae50654efc_4_t18.5s.jpg" alt="frame-4"><img class="frame-img" data-idx="4" src="frames/ae50654efc/ae50654efc_5_t27.8s.jpg" alt="frame-5"><img class="frame-img" data-idx="5" src="frames/ae50654efc/ae50654efc_6_t33.3s.jpg" alt="frame-6">
+    <video class="frame-video" src="videos/ae50654efc.mp4" preload="none" playsinline controls></video>
+    <button class="play-btn" type="button" aria-label="播放视频"><span class="play-icon">▶</span><span>播放原片</span></button>
+    <button class="close-btn" type="button" aria-label="关闭视频">×</button>
+    <div class="video-tip">关键帧轮播</div>
+    <div class="frame-counter">1/6</div>
+    <div class="frame-timestamp">—</div>
+</div>
+    <div class="card-body">
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <div class="section-title">黄金 5 段式拆解</div>
+            </div>
+            <div class="sop-segment hook">
+                <div class="seg-label">钩子 0-3s</div>
+                <div class="seg-text">'找我一定要两盒'+字幕直击——老板亲自喊话，免去选择焦虑，工厂老板娘的'老板娘IP'建立天然信任。</div>
+            </div>
+            <div class="sop-segment pain">
+                <div class="seg-label">痛点 3-10s</div>
+                <div class="seg-text">'凌晨4点半我起来'+手部动作特写——熬夜起早的老板娘形象放大'用真材实料做产品'的辛苦感，激起共情。</div>
+            </div>
+            <div class="sop-segment solution">
+                <div class="seg-label">解药 10-25s</div>
+                <div class="seg-text">'九味香料合和'+字幕标注藏红花/黄芪/当归三味中药材特写——9味香材配方是核心信任符，三味药材画面切换快速建立'组方讲究'印象。</div>
+            </div>
+            <div class="sop-segment demo">
+                <div class="seg-label">演示 25-90s</div>
+                <div class="seg-text">'它给你往外散'+细香点燃画面+小香特写——细长小香设计展示'燃得久烟不冲'，配合茶桌品茶场景。</div>
+            </div>
+            <div class="sop-segment end">
+                <div class="seg-label">收尾 90s+</div>
+                <div class="seg-text">'这么细的一支小香'+多场景试用——绿色包装管束展示+工厂实景收尾，强化品牌工业感。</div>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <div class="section-title">结构流程</div>
+            </div>
+            <div class="flow-structure">
+                <span class="flow-step emphasis">钩子 0-3s</span><span class="flow-arrow">→</span><span class="flow-step ">痛点 3-10s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">解药 10-25s</span><span class="flow-arrow">→</span><span class="flow-step ">演示 25-90s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">收尾 90s+</span>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🏷️</div>
+                <div class="section-title">关键特征</div>
+            </div>
+            <div class="tags-container">
+                <span class="tag feigaoxiao">工厂溯源</span>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="analysis-card" data-md5="b1ffc947fa" data-brand="蜗艾蜗家" data-type="工厂溯源">
+    <div class="card-header">
+        <div class="card-rank">
+            <div class="rank-badge">#2</div>
+            <div class="card-info">
+                <h3 title="工厂老板娘自述香材产地">工厂老板娘自述香材产地</h3>
+                <div class="card-meta">
+                    <span>📊 ROI <strong style="color:var(--accent-gold)">1.87</strong></span>
+                    <span>· 产线工人视角的工厂溯源内容。</span>
+                </div>
+            </div>
+        </div>
+        <span class="brand-tag brand-蜗艾蜗家" style="display:none">蜗艾蜗家</span>
+        <span class="type-tag type-工厂溯源">工厂溯源</span>
+    </div>
+    <div class="metrics-bar">
+        <div class="metric-item">
+            <span class="metric-label">CTR</span>
+            <span class="metric-value">1.80<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CVR</span>
+            <span class="metric-value">13.07<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">ROI</span>
+            <span class="metric-value">1.87</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CPM</span>
+            <span class="metric-value">¥49</span>
+        </div>
+    </div>
+    
+<div class="card-frames" data-md5="b1ffc947fa">
+    <img class="frame-img active" data-idx="0" src="frames/b1ffc947fa/b1ffc947fa_1_t0.5s.jpg" alt="frame-1"><img class="frame-img" data-idx="1" src="frames/b1ffc947fa/b1ffc947fa_2_t3.0s.jpg" alt="frame-2"><img class="frame-img" data-idx="2" src="frames/b1ffc947fa/b1ffc947fa_3_t33.0s.jpg" alt="frame-3"><img class="frame-img" data-idx="3" src="frames/b1ffc947fa/b1ffc947fa_4_t65.9s.jpg" alt="frame-4"><img class="frame-img" data-idx="4" src="frames/b1ffc947fa/b1ffc947fa_5_t98.9s.jpg" alt="frame-5"><img class="frame-img" data-idx="5" src="frames/b1ffc947fa/b1ffc947fa_6_t118.6s.jpg" alt="frame-6">
+    <video class="frame-video" src="videos/b1ffc947fa.mp4" preload="none" playsinline controls></video>
+    <button class="play-btn" type="button" aria-label="播放视频"><span class="play-icon">▶</span><span>播放原片</span></button>
+    <button class="close-btn" type="button" aria-label="关闭视频">×</button>
+    <div class="video-tip">关键帧轮播</div>
+    <div class="frame-counter">1/6</div>
+    <div class="frame-timestamp">—</div>
+</div>
+    <div class="card-body">
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <div class="section-title">黄金 5 段式拆解</div>
+            </div>
+            <div class="sop-segment hook">
+                <div class="seg-label">钩子 0-3s</div>
+                <div class="seg-text">工厂仓库发货场景+流水线作业——直接展示'源头工厂'，目标用户对'中间商赚差价'敏感。</div>
+            </div>
+            <div class="sop-segment pain">
+                <div class="seg-label">痛点 3-10s</div>
+                <div class="seg-text">'没有中间商赚差价'——行业痛点钩子。</div>
+            </div>
+            <div class="sop-segment solution">
+                <div class="seg-label">解药 10-25s</div>
+                <div class="seg-text">工人搬运+多SKU陈列——强调'工厂直发'。</div>
+            </div>
+            <div class="sop-segment demo">
+                <div class="seg-label">演示 25-90s</div>
+                <div class="seg-text">包装+封装过程——工厂线全流程透明化。</div>
+            </div>
+            <div class="sop-segment end">
+                <div class="seg-label">收尾 90s+</div>
+                <div class="seg-text">品控抽检+装车发货——供应链可视化。</div>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <div class="section-title">结构流程</div>
+            </div>
+            <div class="flow-structure">
+                <span class="flow-step emphasis">钩子 0-3s</span><span class="flow-arrow">→</span><span class="flow-step ">痛点 3-10s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">解药 10-25s</span><span class="flow-arrow">→</span><span class="flow-step ">演示 25-90s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">收尾 90s+</span>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🏷️</div>
+                <div class="section-title">关键特征</div>
+            </div>
+            <div class="tags-container">
+                <span class="tag feigaoxiao">工厂溯源</span>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="analysis-card" data-md5="5d715c8561" data-brand="内蒙古敦布仁钦" data-type="产品展示">
+    <div class="card-header">
+        <div class="card-rank">
+            <div class="rank-badge">#3</div>
+            <div class="card-info">
+                <h3 title="蒙派艾草108支体验装">蒙派艾草108支体验装</h3>
+                <div class="card-meta">
+                    <span>📊 ROI <strong style="color:var(--accent-gold)">1.82</strong></span>
+                    <span>· 蒙古族非遗传承人+大份量体验装钩子。</span>
+                </div>
+            </div>
+        </div>
+        <span class="brand-tag brand-内蒙古敦布仁钦" style="display:none">内蒙古敦布仁钦</span>
+        <span class="type-tag type-产品展示">产品展示</span>
+    </div>
+    <div class="metrics-bar">
+        <div class="metric-item">
+            <span class="metric-label">CTR</span>
+            <span class="metric-value">0.93<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CVR</span>
+            <span class="metric-value">13.93<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">ROI</span>
+            <span class="metric-value">1.82</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CPM</span>
+            <span class="metric-value">¥76</span>
+        </div>
+    </div>
+    
+<div class="card-frames" data-md5="5d715c8561">
+    <img class="frame-img active" data-idx="0" src="frames/5d715c8561/5d715c8561_1_t0.5s.jpg" alt="frame-1"><img class="frame-img" data-idx="1" src="frames/5d715c8561/5d715c8561_2_t3.0s.jpg" alt="frame-2"><img class="frame-img" data-idx="2" src="frames/5d715c8561/5d715c8561_3_t9.0s.jpg" alt="frame-3"><img class="frame-img" data-idx="3" src="frames/5d715c8561/5d715c8561_4_t18.0s.jpg" alt="frame-4"><img class="frame-img" data-idx="4" src="frames/5d715c8561/5d715c8561_5_t27.0s.jpg" alt="frame-5"><img class="frame-img" data-idx="5" src="frames/5d715c8561/5d715c8561_6_t32.4s.jpg" alt="frame-6">
+    <video class="frame-video" src="videos/5d715c8561.mp4" preload="none" playsinline controls></video>
+    <button class="play-btn" type="button" aria-label="播放视频"><span class="play-icon">▶</span><span>播放原片</span></button>
+    <button class="close-btn" type="button" aria-label="关闭视频">×</button>
+    <div class="video-tip">关键帧轮播</div>
+    <div class="frame-counter">1/6</div>
+    <div class="frame-timestamp">—</div>
+</div>
+    <div class="card-body">
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <div class="section-title">黄金 5 段式拆解</div>
+            </div>
+            <div class="sop-segment hook">
+                <div class="seg-label">钩子 0-3s</div>
+                <div class="seg-text">'体验装直接给108支！谁家还能像我一样豪横？'——数字冲击+反问式钩子，CTR指标最高(2.21%)之一。</div>
+            </div>
+            <div class="sop-segment pain">
+                <div class="seg-label">痛点 3-10s</div>
+                <div class="seg-text">'我家可能是把体验装'——重新定义'体验装'，高数量低门槛。</div>
+            </div>
+            <div class="sop-segment solution">
+                <div class="seg-label">解药 10-25s</div>
+                <div class="seg-text">'每一款都有27支 这四款一共108支'——数学逻辑强化分量。</div>
+            </div>
+            <div class="sop-segment demo">
+                <div class="seg-label">演示 25-90s</div>
+                <div class="seg-text">木质礼盒+4款香材——4款SKU展示。</div>
+            </div>
+            <div class="sop-segment end">
+                <div class="seg-label">收尾 90s+</div>
+                <div class="seg-text">藏红花+黄芪+当归三味中药特写——非遗药材背书。</div>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <div class="section-title">结构流程</div>
+            </div>
+            <div class="flow-structure">
+                <span class="flow-step emphasis">钩子 0-3s</span><span class="flow-arrow">→</span><span class="flow-step ">痛点 3-10s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">解药 10-25s</span><span class="flow-arrow">→</span><span class="flow-step ">演示 25-90s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">收尾 90s+</span>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🏷️</div>
+                <div class="section-title">关键特征</div>
+            </div>
+            <div class="tags-container">
+                <span class="tag gaoxiao">数字锚点</span>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="analysis-card" data-md5="3139b30325" data-brand="海大" data-type="产品展示">
+    <div class="card-header">
+        <div class="card-rank">
+            <div class="rank-badge">#4</div>
+            <div class="card-info">
+                <h3 title="海大泡脚桶 沉浸版">海大泡脚桶 沉浸版</h3>
+                <div class="card-meta">
+                    <span>📊 ROI <strong style="color:var(--accent-gold)">1.81</strong></span>
+                    <span>· 古风水墨风格的泡脚知识科普。</span>
+                </div>
+            </div>
+        </div>
+        <span class="brand-tag brand-海大" style="display:none">海大</span>
+        <span class="type-tag type-产品展示">产品展示</span>
+    </div>
+    <div class="metrics-bar">
+        <div class="metric-item">
+            <span class="metric-label">CTR</span>
+            <span class="metric-value">2.60<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CVR</span>
+            <span class="metric-value">6.70<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">ROI</span>
+            <span class="metric-value">1.81</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CPM</span>
+            <span class="metric-value">¥38</span>
+        </div>
+    </div>
+    
+<div class="card-frames" data-md5="3139b30325">
+    <img class="frame-img active" data-idx="0" src="frames/3139b30325/3139b30325_1_t0.5s.jpg" alt="frame-1"><img class="frame-img" data-idx="1" src="frames/3139b30325/3139b30325_2_t3.0s.jpg" alt="frame-2"><img class="frame-img" data-idx="2" src="frames/3139b30325/3139b30325_3_t16.8s.jpg" alt="frame-3"><img class="frame-img" data-idx="3" src="frames/3139b30325/3139b30325_4_t33.6s.jpg" alt="frame-4"><img class="frame-img" data-idx="4" src="frames/3139b30325/3139b30325_5_t50.4s.jpg" alt="frame-5"><img class="frame-img" data-idx="5" src="frames/3139b30325/3139b30325_6_t60.4s.jpg" alt="frame-6">
+    <video class="frame-video" src="videos/3139b30325.mp4" preload="none" playsinline controls></video>
+    <button class="play-btn" type="button" aria-label="播放视频"><span class="play-icon">▶</span><span>播放原片</span></button>
+    <button class="close-btn" type="button" aria-label="关闭视频">×</button>
+    <div class="video-tip">关键帧轮播</div>
+    <div class="frame-counter">1/6</div>
+    <div class="frame-timestamp">—</div>
+</div>
+    <div class="card-body">
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <div class="section-title">黄金 5 段式拆解</div>
+            </div>
+            <div class="sop-segment hook">
+                <div class="seg-label">钩子 0-3s</div>
+                <div class="seg-text">'为什么泡脚不能够在睡前去泡呢？你知道有什么⚠️吗？'——问号+警告符号制造悬念。</div>
+            </div>
+            <div class="sop-segment pain">
+                <div class="seg-label">痛点 3-10s</div>
+                <div class="seg-text">'5个泡脚时间/时长/温度/水位/加料关键点'——知识科普建立专业感。</div>
+            </div>
+            <div class="sop-segment solution">
+                <div class="seg-label">解药 10-25s</div>
+                <div class="seg-text">'折叠保温泡脚桶'——产品自然植入。</div>
+            </div>
+            <div class="sop-segment demo">
+                <div class="seg-label">演示 25-90s</div>
+                <div class="seg-text">古风手绘泡脚场景+水墨画风——差异化视觉风格。</div>
+            </div>
+            <div class="sop-segment end">
+                <div class="seg-label">收尾 90s+</div>
+                <div class="seg-text">足浴包展示+三合一卖点——'熏/蒸/泡'三合一再次强调。</div>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <div class="section-title">结构流程</div>
+            </div>
+            <div class="flow-structure">
+                <span class="flow-step emphasis">钩子 0-3s</span><span class="flow-arrow">→</span><span class="flow-step ">痛点 3-10s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">解药 10-25s</span><span class="flow-arrow">→</span><span class="flow-step ">演示 25-90s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">收尾 90s+</span>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🏷️</div>
+                <div class="section-title">关键特征</div>
+            </div>
+            <div class="tags-container">
+                <span class="tag feigaoxiao">知识科普</span>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="analysis-card" data-md5="c9249b0995" data-brand="蜗艾蜗家" data-type="场景演绎">
+    <div class="card-header">
+        <div class="card-rank">
+            <div class="rank-badge">#5</div>
+            <div class="card-info">
+                <h3 title="肚脐贴的艾灸场景">肚脐贴的艾灸场景</h3>
+                <div class="card-meta">
+                    <span>📊 ROI <strong style="color:var(--accent-gold)">1.81</strong></span>
+                    <span>· 瑜伽垫上白领女性使用艾灸仪+肚脐贴的居家场景，年轻化品类突围...</span>
+                </div>
+            </div>
+        </div>
+        <span class="brand-tag brand-蜗艾蜗家" style="display:none">蜗艾蜗家</span>
+        <span class="type-tag type-场景演绎">场景演绎</span>
+    </div>
+    <div class="metrics-bar">
+        <div class="metric-item">
+            <span class="metric-label">CTR</span>
+            <span class="metric-value">1.56<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CVR</span>
+            <span class="metric-value">14.46<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">ROI</span>
+            <span class="metric-value">1.81</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CPM</span>
+            <span class="metric-value">¥54</span>
+        </div>
+    </div>
+    
+<div class="card-frames" data-md5="c9249b0995">
+    <img class="frame-img active" data-idx="0" src="frames/c9249b0995/c9249b0995_1_t0.5s.jpg" alt="frame-1"><img class="frame-img" data-idx="1" src="frames/c9249b0995/c9249b0995_2_t3.0s.jpg" alt="frame-2"><img class="frame-img" data-idx="2" src="frames/c9249b0995/c9249b0995_3_t45.3s.jpg" alt="frame-3"><img class="frame-img" data-idx="3" src="frames/c9249b0995/c9249b0995_4_t90.6s.jpg" alt="frame-4"><img class="frame-img" data-idx="4" src="frames/c9249b0995/c9249b0995_5_t135.9s.jpg" alt="frame-5"><img class="frame-img" data-idx="5" src="frames/c9249b0995/c9249b0995_6_t163.1s.jpg" alt="frame-6">
+    <video class="frame-video" src="videos/c9249b0995.mp4" preload="none" playsinline controls></video>
+    <button class="play-btn" type="button" aria-label="播放视频"><span class="play-icon">▶</span><span>播放原片</span></button>
+    <button class="close-btn" type="button" aria-label="关闭视频">×</button>
+    <div class="video-tip">关键帧轮播</div>
+    <div class="frame-counter">1/6</div>
+    <div class="frame-timestamp">—</div>
+</div>
+    <div class="card-body">
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <div class="section-title">黄金 5 段式拆解</div>
+            </div>
+            <div class="sop-segment hook">
+                <div class="seg-label">钩子 0-3s</div>
+                <div class="seg-text">黄色字幕引流+艾灸仪特写——紫色艾灸仪直接展示'产品即钩子'，目标人群是一二线女性。</div>
+            </div>
+            <div class="sop-segment pain">
+                <div class="seg-label">痛点 3-10s</div>
+                <div class="seg-text">'戴上去你就该干啥干啥'——解放双手的痛点直击，针对上班族/带娃妈妈的碎片化时间。</div>
+            </div>
+            <div class="sop-segment solution">
+                <div class="seg-label">解药 10-25s</div>
+                <div class="seg-text">腹部贴敷+艾灸盒+瑜伽垫三件套——构建'边运动边养生'的复合使用场景。</div>
+            </div>
+            <div class="sop-segment demo">
+                <div class="seg-label">演示 25-90s</div>
+                <div class="seg-text">瑜伽动作+工作场景穿插——看ipad/做瑜伽两不误，强调'不耽误事'的实用性。</div>
+            </div>
+            <div class="sop-segment end">
+                <div class="seg-label">收尾 90s+</div>
+                <div class="seg-text">老板亲自现身+工厂仓库发货——情感线与工业线双收尾。</div>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <div class="section-title">结构流程</div>
+            </div>
+            <div class="flow-structure">
+                <span class="flow-step emphasis">钩子 0-3s</span><span class="flow-arrow">→</span><span class="flow-step ">痛点 3-10s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">解药 10-25s</span><span class="flow-arrow">→</span><span class="flow-step ">演示 25-90s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">收尾 90s+</span>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🏷️</div>
+                <div class="section-title">关键特征</div>
+            </div>
+            <div class="tags-container">
+                <span class="tag feigaoxiao">多场景</span>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="analysis-card" data-md5="a25e79bc34" data-brand="植物大师" data-type="明星代言">
+    <div class="card-header">
+        <div class="card-rank">
+            <div class="rank-badge">#6</div>
+            <div class="card-info">
+                <h3 title="于震代言肚脐贴618大促">于震代言肚脐贴618大促</h3>
+                <div class="card-meta">
+                    <span>📊 ROI <strong style="color:var(--accent-gold)">1.76</strong></span>
+                    <span>· 著名演员于震亲自代言+618福利倒计时，明星背书型大促内容。</span>
+                </div>
+            </div>
+        </div>
+        <span class="brand-tag brand-植物大师" style="display:none">植物大师</span>
+        <span class="type-tag type-明星代言">明星代言</span>
+    </div>
+    <div class="metrics-bar">
+        <div class="metric-item">
+            <span class="metric-label">CTR</span>
+            <span class="metric-value">3.91<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CVR</span>
+            <span class="metric-value">12.30<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">ROI</span>
+            <span class="metric-value">1.76</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CPM</span>
+            <span class="metric-value">¥106</span>
+        </div>
+    </div>
+    
+<div class="card-frames" data-md5="a25e79bc34">
+    <img class="frame-img active" data-idx="0" src="frames/a25e79bc34/a25e79bc34_1_t0.5s.jpg" alt="frame-1"><img class="frame-img" data-idx="1" src="frames/a25e79bc34/a25e79bc34_2_t3.0s.jpg" alt="frame-2"><img class="frame-img" data-idx="2" src="frames/a25e79bc34/a25e79bc34_3_t16.3s.jpg" alt="frame-3"><img class="frame-img" data-idx="3" src="frames/a25e79bc34/a25e79bc34_4_t32.7s.jpg" alt="frame-4"><img class="frame-img" data-idx="4" src="frames/a25e79bc34/a25e79bc34_5_t49.0s.jpg" alt="frame-5"><img class="frame-img" data-idx="5" src="frames/a25e79bc34/a25e79bc34_6_t58.8s.jpg" alt="frame-6">
+    <video class="frame-video" src="videos/a25e79bc34.mp4" preload="none" playsinline controls></video>
+    <button class="play-btn" type="button" aria-label="播放视频"><span class="play-icon">▶</span><span>播放原片</span></button>
+    <button class="close-btn" type="button" aria-label="关闭视频">×</button>
+    <div class="video-tip">关键帧轮播</div>
+    <div class="frame-counter">1/6</div>
+    <div class="frame-timestamp">—</div>
+</div>
+    <div class="card-body">
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <div class="section-title">黄金 5 段式拆解</div>
+            </div>
+            <div class="sop-segment hook">
+                <div class="seg-label">钩子 0-3s</div>
+                <div class="seg-text">'你要是下个月就错过618的福利了'——倒计时紧迫钩子，配合'植物大师'品牌角标+于震明星介绍。</div>
+            </div>
+            <div class="sop-segment pain">
+                <div class="seg-label">痛点 3-10s</div>
+                <div class="seg-text">'给植物大师一次机会'——明星降低信任门槛，针对'不熟悉品牌'的观望用户。</div>
+            </div>
+            <div class="sop-segment solution">
+                <div class="seg-label">解药 10-25s</div>
+                <div class="seg-text">产品多盒堆叠展示——'囤货'心理暗示，柳条箱内4盒产品摆盘+中医元素画面。</div>
+            </div>
+            <div class="sop-segment demo">
+                <div class="seg-label">演示 25-90s</div>
+                <div class="seg-text">'又好用你就留下'——明星代言+承诺双重叠加。</div>
+            </div>
+            <div class="sop-segment end">
+                <div class="seg-label">收尾 90s+</div>
+                <div class="seg-text">工厂仓库装车画面——'源头工厂'再次强化信任。</div>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <div class="section-title">结构流程</div>
+            </div>
+            <div class="flow-structure">
+                <span class="flow-step emphasis">钩子 0-3s</span><span class="flow-arrow">→</span><span class="flow-step ">痛点 3-10s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">解药 10-25s</span><span class="flow-arrow">→</span><span class="flow-step ">演示 25-90s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">收尾 90s+</span>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🏷️</div>
+                <div class="section-title">关键特征</div>
+            </div>
+            <div class="tags-container">
+                <span class="tag gaoxiao">明星代言</span>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="analysis-card" data-md5="e65f40c0a6" data-brand="蜗艾蜗家" data-type="工厂溯源">
+    <div class="card-header">
+        <div class="card-rank">
+            <div class="rank-badge">#7</div>
+            <div class="card-info">
+                <h3 title="老板亲述艾灸香材配比">老板亲述艾灸香材配比</h3>
+                <div class="card-meta">
+                    <span>📊 ROI <strong style="color:var(--accent-gold)">1.73</strong></span>
+                    <span>· 工厂老板第一人称讲述香材配比，权威专家型内容。</span>
+                </div>
+            </div>
+        </div>
+        <span class="brand-tag brand-蜗艾蜗家" style="display:none">蜗艾蜗家</span>
+        <span class="type-tag type-工厂溯源">工厂溯源</span>
+    </div>
+    <div class="metrics-bar">
+        <div class="metric-item">
+            <span class="metric-label">CTR</span>
+            <span class="metric-value">1.82<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CVR</span>
+            <span class="metric-value">12.23<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">ROI</span>
+            <span class="metric-value">1.73</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CPM</span>
+            <span class="metric-value">¥60</span>
+        </div>
+    </div>
+    
+<div class="card-frames" data-md5="e65f40c0a6">
+    <img class="frame-img active" data-idx="0" src="frames/e65f40c0a6/e65f40c0a6_1_t0.5s.jpg" alt="frame-1"><img class="frame-img" data-idx="1" src="frames/e65f40c0a6/e65f40c0a6_2_t3.0s.jpg" alt="frame-2"><img class="frame-img" data-idx="2" src="frames/e65f40c0a6/e65f40c0a6_3_t58.5s.jpg" alt="frame-3"><img class="frame-img" data-idx="3" src="frames/e65f40c0a6/e65f40c0a6_4_t116.9s.jpg" alt="frame-4"><img class="frame-img" data-idx="4" src="frames/e65f40c0a6/e65f40c0a6_5_t175.3s.jpg" alt="frame-5"><img class="frame-img" data-idx="5" src="frames/e65f40c0a6/e65f40c0a6_6_t210.4s.jpg" alt="frame-6">
+    <video class="frame-video" src="videos/e65f40c0a6.mp4" preload="none" playsinline controls></video>
+    <button class="play-btn" type="button" aria-label="播放视频"><span class="play-icon">▶</span><span>播放原片</span></button>
+    <button class="close-btn" type="button" aria-label="关闭视频">×</button>
+    <div class="video-tip">关键帧轮播</div>
+    <div class="frame-counter">1/6</div>
+    <div class="frame-timestamp">—</div>
+</div>
+    <div class="card-body">
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <div class="section-title">黄金 5 段式拆解</div>
+            </div>
+            <div class="sop-segment hook">
+                <div class="seg-label">钩子 0-3s</div>
+                <div class="seg-text">'我家可能是把体验装'——价格锚点钩子，强调'体验装'降低决策门槛。</div>
+            </div>
+            <div class="sop-segment pain">
+                <div class="seg-label">痛点 3-10s</div>
+                <div class="seg-text">'108支谁家还能像我一样豪横'——夸张式数字制造紧迫感。</div>
+            </div>
+            <div class="sop-segment solution">
+                <div class="seg-label">解药 10-25s</div>
+                <div class="seg-text">'每一款都有27支 这四款一共108支'——数学细节+木质礼盒展示，建立'豪华装'认知。</div>
+            </div>
+            <div class="sop-segment demo">
+                <div class="seg-label">演示 25-90s</div>
+                <div class="seg-text">木盒开箱+多味香材特写——逐条点燃，9种香材逐一过堂。</div>
+            </div>
+            <div class="sop-segment end">
+                <div class="seg-label">收尾 90s+</div>
+                <div class="seg-text">工厂原料展示——'藏红花/黄芪/当归'三味药材实拍画面强化真材实料。</div>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <div class="section-title">结构流程</div>
+            </div>
+            <div class="flow-structure">
+                <span class="flow-step emphasis">钩子 0-3s</span><span class="flow-arrow">→</span><span class="flow-step ">痛点 3-10s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">解药 10-25s</span><span class="flow-arrow">→</span><span class="flow-step ">演示 25-90s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">收尾 90s+</span>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🏷️</div>
+                <div class="section-title">关键特征</div>
+            </div>
+            <div class="tags-container">
+                <span class="tag feigaoxiao">工厂溯源</span>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="analysis-card" data-md5="bde841ee91" data-brand="郑州市尘与萤" data-type="场景演绎">
+    <div class="card-header">
+        <div class="card-rank">
+            <div class="rank-badge">#8</div>
+            <div class="card-info">
+                <h3 title="折叠泡脚桶 旅行款">折叠泡脚桶 旅行款</h3>
+                <div class="card-meta">
+                    <span>📊 ROI <strong style="color:var(--accent-gold)">1.73</strong></span>
+                    <span>· 旅行场景差异化卖点。</span>
+                </div>
+            </div>
+        </div>
+        <span class="brand-tag brand-郑州市尘与萤" style="display:none">郑州市尘与萤</span>
+        <span class="type-tag type-场景演绎">场景演绎</span>
+    </div>
+    <div class="metrics-bar">
+        <div class="metric-item">
+            <span class="metric-label">CTR</span>
+            <span class="metric-value">3.86<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CVR</span>
+            <span class="metric-value">15.91<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">ROI</span>
+            <span class="metric-value">1.73</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CPM</span>
+            <span class="metric-value">¥47</span>
+        </div>
+    </div>
+    
+<div class="card-frames" data-md5="bde841ee91">
+    <img class="frame-img active" data-idx="0" src="frames/bde841ee91/bde841ee91_1_t0.5s.jpg" alt="frame-1"><img class="frame-img" data-idx="1" src="frames/bde841ee91/bde841ee91_2_t3.0s.jpg" alt="frame-2"><img class="frame-img" data-idx="2" src="frames/bde841ee91/bde841ee91_3_t73.4s.jpg" alt="frame-3"><img class="frame-img" data-idx="3" src="frames/bde841ee91/bde841ee91_4_t146.8s.jpg" alt="frame-4"><img class="frame-img" data-idx="4" src="frames/bde841ee91/bde841ee91_5_t220.3s.jpg" alt="frame-5"><img class="frame-img" data-idx="5" src="frames/bde841ee91/bde841ee91_6_t264.3s.jpg" alt="frame-6">
+    <video class="frame-video" src="videos/bde841ee91.mp4" preload="none" playsinline controls></video>
+    <button class="play-btn" type="button" aria-label="播放视频"><span class="play-icon">▶</span><span>播放原片</span></button>
+    <button class="close-btn" type="button" aria-label="关闭视频">×</button>
+    <div class="video-tip">关键帧轮播</div>
+    <div class="frame-counter">1/6</div>
+    <div class="frame-timestamp">—</div>
+</div>
+    <div class="card-body">
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <div class="section-title">黄金 5 段式拆解</div>
+            </div>
+            <div class="sop-segment hook">
+                <div class="seg-label">钩子 0-3s</div>
+                <div class="seg-text">候机厅场景+折叠桶展开——直接定位'差旅人群'。</div>
+            </div>
+            <div class="sop-segment pain">
+                <div class="seg-label">痛点 3-10s</div>
+                <div class="seg-text">'出差泡不了脚'——差旅人士养生痛点。</div>
+            </div>
+            <div class="sop-segment solution">
+                <div class="seg-label">解药 10-25s</div>
+                <div class="seg-text">'折叠保温泡脚桶'——便携性核心卖点。</div>
+            </div>
+            <div class="sop-segment demo">
+                <div class="seg-label">演示 25-90s</div>
+                <div class="seg-text">候机厅真实使用+多场景切换——真人实证。</div>
+            </div>
+            <div class="sop-segment end">
+                <div class="seg-label">收尾 90s+</div>
+                <div class="seg-text">'一折一收'演示——便携性可视化收尾。</div>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <div class="section-title">结构流程</div>
+            </div>
+            <div class="flow-structure">
+                <span class="flow-step emphasis">钩子 0-3s</span><span class="flow-arrow">→</span><span class="flow-step ">痛点 3-10s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">解药 10-25s</span><span class="flow-arrow">→</span><span class="flow-step ">演示 25-90s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">收尾 90s+</span>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🏷️</div>
+                <div class="section-title">关键特征</div>
+            </div>
+            <div class="tags-container">
+                <span class="tag feigaoxiao">多场景</span>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="analysis-card" data-md5="c447e1e7ac" data-brand="植物大师" data-type="产品展示">
+    <div class="card-header">
+        <div class="card-rank">
+            <div class="rank-badge">#9</div>
+            <div class="card-info">
+                <h3 title="肚脐贴品牌TVC">肚脐贴品牌TVC</h3>
+                <div class="card-meta">
+                    <span>📊 ROI <strong style="color:var(--accent-gold)">1.72</strong></span>
+                    <span>· 白大褂专家代言+品牌TVC。</span>
+                </div>
+            </div>
+        </div>
+        <span class="brand-tag brand-植物大师" style="display:none">植物大师</span>
+        <span class="type-tag type-产品展示">产品展示</span>
+    </div>
+    <div class="metrics-bar">
+        <div class="metric-item">
+            <span class="metric-label">CTR</span>
+            <span class="metric-value">3.10<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CVR</span>
+            <span class="metric-value">12.98<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">ROI</span>
+            <span class="metric-value">1.72</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CPM</span>
+            <span class="metric-value">¥95</span>
+        </div>
+    </div>
+    
+<div class="card-frames" data-md5="c447e1e7ac">
+    <img class="frame-img active" data-idx="0" src="frames/c447e1e7ac/c447e1e7ac_1_t0.5s.jpg" alt="frame-1"><img class="frame-img" data-idx="1" src="frames/c447e1e7ac/c447e1e7ac_2_t3.0s.jpg" alt="frame-2"><img class="frame-img" data-idx="2" src="frames/c447e1e7ac/c447e1e7ac_3_t25.2s.jpg" alt="frame-3"><img class="frame-img" data-idx="3" src="frames/c447e1e7ac/c447e1e7ac_4_t50.3s.jpg" alt="frame-4"><img class="frame-img" data-idx="4" src="frames/c447e1e7ac/c447e1e7ac_5_t75.5s.jpg" alt="frame-5"><img class="frame-img" data-idx="5" src="frames/c447e1e7ac/c447e1e7ac_6_t90.6s.jpg" alt="frame-6">
+    <video class="frame-video" src="videos/c447e1e7ac.mp4" preload="none" playsinline controls></video>
+    <button class="play-btn" type="button" aria-label="播放视频"><span class="play-icon">▶</span><span>播放原片</span></button>
+    <button class="close-btn" type="button" aria-label="关闭视频">×</button>
+    <div class="video-tip">关键帧轮播</div>
+    <div class="frame-counter">1/6</div>
+    <div class="frame-timestamp">—</div>
+</div>
+    <div class="card-body">
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <div class="section-title">黄金 5 段式拆解</div>
+            </div>
+            <div class="sop-segment hook">
+                <div class="seg-label">钩子 0-3s</div>
+                <div class="seg-text">白大褂+品牌LOGO画面——'植物大师代言人于震'字幕直接建立专家身份。</div>
+            </div>
+            <div class="sop-segment pain">
+                <div class="seg-label">痛点 3-10s</div>
+                <div class="seg-text">'再用植物大师艾绒肚脐贴'——口碑传播钩子。</div>
+            </div>
+            <div class="sop-segment solution">
+                <div class="seg-label">解药 10-25s</div>
+                <div class="seg-text">'这种肚子最好调'腹部特写——直接定位目标用户(肚子问题)。</div>
+            </div>
+            <div class="sop-segment demo">
+                <div class="seg-label">演示 25-90s</div>
+                <div class="seg-text">肚脐贴贴敷+使用场景——多角度产品展示。</div>
+            </div>
+            <div class="sop-segment end">
+                <div class="seg-label">收尾 90s+</div>
+                <div class="seg-text">'再买植物大师艾绒肚脐贴'——品牌强化收尾。</div>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <div class="section-title">结构流程</div>
+            </div>
+            <div class="flow-structure">
+                <span class="flow-step emphasis">钩子 0-3s</span><span class="flow-arrow">→</span><span class="flow-step ">痛点 3-10s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">解药 10-25s</span><span class="flow-arrow">→</span><span class="flow-step ">演示 25-90s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">收尾 90s+</span>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🏷️</div>
+                <div class="section-title">关键特征</div>
+            </div>
+            <div class="tags-container">
+                <span class="tag gaoxiao">明星代言</span>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="analysis-card" data-md5="672380ff2b" data-brand="植物大师" data-type="产品展示">
+    <div class="card-header">
+        <div class="card-rank">
+            <div class="rank-badge">#10</div>
+            <div class="card-info">
+                <h3 title="植物大师 高端礼盒版">植物大师 高端礼盒版</h3>
+                <div class="card-meta">
+                    <span>📊 ROI <strong style="color:var(--accent-gold)">1.71</strong></span>
+                    <span>· 高端礼盒装+多场景。</span>
+                </div>
+            </div>
+        </div>
+        <span class="brand-tag brand-植物大师" style="display:none">植物大师</span>
+        <span class="type-tag type-产品展示">产品展示</span>
+    </div>
+    <div class="metrics-bar">
+        <div class="metric-item">
+            <span class="metric-label">CTR</span>
+            <span class="metric-value">2.67<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CVR</span>
+            <span class="metric-value">14.46<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">ROI</span>
+            <span class="metric-value">1.71</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CPM</span>
+            <span class="metric-value">¥79</span>
+        </div>
+    </div>
+    
+<div class="card-frames" data-md5="672380ff2b">
+    <img class="frame-img active" data-idx="0" src="frames/672380ff2b/672380ff2b_1_t0.5s.jpg" alt="frame-1"><img class="frame-img" data-idx="1" src="frames/672380ff2b/672380ff2b_2_t3.0s.jpg" alt="frame-2"><img class="frame-img" data-idx="2" src="frames/672380ff2b/672380ff2b_3_t48.0s.jpg" alt="frame-3"><img class="frame-img" data-idx="3" src="frames/672380ff2b/672380ff2b_4_t96.1s.jpg" alt="frame-4"><img class="frame-img" data-idx="4" src="frames/672380ff2b/672380ff2b_5_t144.1s.jpg" alt="frame-5"><img class="frame-img" data-idx="5" src="frames/672380ff2b/672380ff2b_6_t172.9s.jpg" alt="frame-6">
+    <video class="frame-video" src="videos/672380ff2b.mp4" preload="none" playsinline controls></video>
+    <button class="play-btn" type="button" aria-label="播放视频"><span class="play-icon">▶</span><span>播放原片</span></button>
+    <button class="close-btn" type="button" aria-label="关闭视频">×</button>
+    <div class="video-tip">关键帧轮播</div>
+    <div class="frame-counter">1/6</div>
+    <div class="frame-timestamp">—</div>
+</div>
+    <div class="card-body">
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <div class="section-title">黄金 5 段式拆解</div>
+            </div>
+            <div class="sop-segment hook">
+                <div class="seg-label">钩子 0-3s</div>
+                <div class="seg-text">柳条箱开箱画面——礼盒仪式感。</div>
+            </div>
+            <div class="sop-segment pain">
+                <div class="seg-label">痛点 3-10s</div>
+                <div class="seg-text">'又好用你就留下'——试用承诺。</div>
+            </div>
+            <div class="sop-segment solution">
+                <div class="seg-label">解药 10-25s</div>
+                <div class="seg-text">4盒产品摆盘+中医元素——礼盒装展示。</div>
+            </div>
+            <div class="sop-segment demo">
+                <div class="seg-label">演示 25-90s</div>
+                <div class="seg-text">多场景切换——适用场景多。</div>
+            </div>
+            <div class="sop-segment end">
+                <div class="seg-label">收尾 90s+</div>
+                <div class="seg-text">'囤货'暗示——复购引导。</div>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <div class="section-title">结构流程</div>
+            </div>
+            <div class="flow-structure">
+                <span class="flow-step emphasis">钩子 0-3s</span><span class="flow-arrow">→</span><span class="flow-step ">痛点 3-10s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">解药 10-25s</span><span class="flow-arrow">→</span><span class="flow-step ">演示 25-90s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">收尾 90s+</span>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🏷️</div>
+                <div class="section-title">关键特征</div>
+            </div>
+            <div class="tags-container">
+                <span class="tag feigaoxiao">多场景</span><span class="tag gaoxiao">礼盒仪式</span>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="analysis-card" data-md5="f35bbfdf55" data-brand="初代" data-type="知识科普">
+    <div class="card-header">
+        <div class="card-rank">
+            <div class="rank-badge">#11</div>
+            <div class="card-info">
+                <h3 title="初代肚脐贴 知识科普版">初代肚脐贴 知识科普版</h3>
+                <div class="card-meta">
+                    <span>📊 ROI <strong style="color:var(--accent-gold)">1.70</strong></span>
+                    <span>· 医生白大褂+肚脐贴知识内容。</span>
+                </div>
+            </div>
+        </div>
+        <span class="brand-tag brand-初代" style="display:none">初代</span>
+        <span class="type-tag type-知识科普">知识科普</span>
+    </div>
+    <div class="metrics-bar">
+        <div class="metric-item">
+            <span class="metric-label">CTR</span>
+            <span class="metric-value">1.70<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CVR</span>
+            <span class="metric-value">15.29<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">ROI</span>
+            <span class="metric-value">1.70</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CPM</span>
+            <span class="metric-value">¥118</span>
+        </div>
+    </div>
+    
+<div class="card-frames" data-md5="f35bbfdf55">
+    <img class="frame-img active" data-idx="0" src="frames/f35bbfdf55/f35bbfdf55_1_t0.5s.jpg" alt="frame-1"><img class="frame-img" data-idx="1" src="frames/f35bbfdf55/f35bbfdf55_2_t3.0s.jpg" alt="frame-2"><img class="frame-img" data-idx="2" src="frames/f35bbfdf55/f35bbfdf55_3_t12.6s.jpg" alt="frame-3"><img class="frame-img" data-idx="3" src="frames/f35bbfdf55/f35bbfdf55_4_t25.2s.jpg" alt="frame-4"><img class="frame-img" data-idx="4" src="frames/f35bbfdf55/f35bbfdf55_5_t37.8s.jpg" alt="frame-5"><img class="frame-img" data-idx="5" src="frames/f35bbfdf55/f35bbfdf55_6_t45.4s.jpg" alt="frame-6">
+    <video class="frame-video" src="videos/f35bbfdf55.mp4" preload="none" playsinline controls></video>
+    <button class="play-btn" type="button" aria-label="播放视频"><span class="play-icon">▶</span><span>播放原片</span></button>
+    <button class="close-btn" type="button" aria-label="关闭视频">×</button>
+    <div class="video-tip">关键帧轮播</div>
+    <div class="frame-counter">1/6</div>
+    <div class="frame-timestamp">—</div>
+</div>
+    <div class="card-body">
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <div class="section-title">黄金 5 段式拆解</div>
+            </div>
+            <div class="sop-segment hook">
+                <div class="seg-label">钩子 0-3s</div>
+                <div class="seg-text">医生白大褂人物出镜——权威专家钩子。</div>
+            </div>
+            <div class="sop-segment pain">
+                <div class="seg-label">痛点 3-10s</div>
+                <div class="seg-text">'这种肚子最好调'字幕——症状前置。</div>
+            </div>
+            <div class="sop-segment solution">
+                <div class="seg-label">解药 10-25s</div>
+                <div class="seg-text">肚脐贴贴敷示范——医生专业示范。</div>
+            </div>
+            <div class="sop-segment demo">
+                <div class="seg-label">演示 25-90s</div>
+                <div class="seg-text">腹部穴位图+讲解——中医知识内容。</div>
+            </div>
+            <div class="sop-segment end">
+                <div class="seg-label">收尾 90s+</div>
+                <div class="seg-text">产品+使用建议——购买引导。</div>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <div class="section-title">结构流程</div>
+            </div>
+            <div class="flow-structure">
+                <span class="flow-step emphasis">钩子 0-3s</span><span class="flow-arrow">→</span><span class="flow-step ">痛点 3-10s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">解药 10-25s</span><span class="flow-arrow">→</span><span class="flow-step ">演示 25-90s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">收尾 90s+</span>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🏷️</div>
+                <div class="section-title">关键特征</div>
+            </div>
+            <div class="tags-container">
+                <span class="tag feigaoxiao">知识科普</span>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="analysis-card" data-md5="2c3ebcc39d" data-brand="海大" data-type="产品展示">
+    <div class="card-header">
+        <div class="card-rank">
+            <div class="rank-badge">#12</div>
+            <div class="card-info">
+                <h3 title="三伏天泡脚桶">三伏天泡脚桶</h3>
+                <div class="card-meta">
+                    <span>📊 ROI <strong style="color:var(--accent-gold)">1.69</strong></span>
+                    <span>· 季节痛点钩子+三合一卖点+多场景展示。</span>
+                </div>
+            </div>
+        </div>
+        <span class="brand-tag brand-海大" style="display:none">海大</span>
+        <span class="type-tag type-产品展示">产品展示</span>
+    </div>
+    <div class="metrics-bar">
+        <div class="metric-item">
+            <span class="metric-label">CTR</span>
+            <span class="metric-value">2.40<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CVR</span>
+            <span class="metric-value">12.60<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">ROI</span>
+            <span class="metric-value">1.69</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CPM</span>
+            <span class="metric-value">¥64</span>
+        </div>
+    </div>
+    
+<div class="card-frames" data-md5="2c3ebcc39d">
+    <img class="frame-img active" data-idx="0" src="frames/2c3ebcc39d/2c3ebcc39d_1_t0.5s.jpg" alt="frame-1"><img class="frame-img" data-idx="1" src="frames/2c3ebcc39d/2c3ebcc39d_2_t3.0s.jpg" alt="frame-2"><img class="frame-img" data-idx="2" src="frames/2c3ebcc39d/2c3ebcc39d_3_t30.4s.jpg" alt="frame-3"><img class="frame-img" data-idx="3" src="frames/2c3ebcc39d/2c3ebcc39d_4_t60.9s.jpg" alt="frame-4"><img class="frame-img" data-idx="4" src="frames/2c3ebcc39d/2c3ebcc39d_5_t91.4s.jpg" alt="frame-5"><img class="frame-img" data-idx="5" src="frames/2c3ebcc39d/2c3ebcc39d_6_t109.6s.jpg" alt="frame-6">
+    <video class="frame-video" src="videos/2c3ebcc39d.mp4" preload="none" playsinline controls></video>
+    <button class="play-btn" type="button" aria-label="播放视频"><span class="play-icon">▶</span><span>播放原片</span></button>
+    <button class="close-btn" type="button" aria-label="关闭视频">×</button>
+    <div class="video-tip">关键帧轮播</div>
+    <div class="frame-counter">1/6</div>
+    <div class="frame-timestamp">—</div>
+</div>
+    <div class="card-body">
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <div class="section-title">黄金 5 段式拆解</div>
+            </div>
+            <div class="sop-segment hook">
+                <div class="seg-label">钩子 0-3s</div>
+                <div class="seg-text">'女人三伏天坚持泡脚一段时间你试试看'——季节+人群双重痛点钩子，明确目标人群(女性)+使用时间(三伏天)。</div>
+            </div>
+            <div class="sop-segment pain">
+                <div class="seg-label">痛点 3-10s</div>
+                <div class="seg-text">'泡脚你要是泡到脚脖子'——视觉化痛点(桶太浅)。</div>
+            </div>
+            <div class="sop-segment solution">
+                <div class="seg-label">解药 10-25s</div>
+                <div class="seg-text">'便捷式保温折叠泡脚桶'+3个核心卖点字幕'折叠收纳/铝箔保温/呵护双脚'——三合一功能点密集曝光。</div>
+            </div>
+            <div class="sop-segment demo">
+                <div class="seg-label">演示 25-90s</div>
+                <div class="seg-text">多模特多场景展示——坐沙发/靠床头/办公场景，强调'不挑场景'。</div>
+            </div>
+            <div class="sop-segment end">
+                <div class="seg-label">收尾 90s+</div>
+                <div class="seg-text">粉色桶收纳形态——'折叠后仅一个手提包大小'的可视化对比。</div>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <div class="section-title">结构流程</div>
+            </div>
+            <div class="flow-structure">
+                <span class="flow-step emphasis">钩子 0-3s</span><span class="flow-arrow">→</span><span class="flow-step ">痛点 3-10s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">解药 10-25s</span><span class="flow-arrow">→</span><span class="flow-step ">演示 25-90s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">收尾 90s+</span>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🏷️</div>
+                <div class="section-title">关键特征</div>
+            </div>
+            <div class="tags-container">
+                <span class="tag gaoxiao">季节钩子</span><span class="tag feigaoxiao">多场景</span>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="analysis-card" data-md5="42266344e4" data-brand="海大" data-type="产品展示">
+    <div class="card-header">
+        <div class="card-rank">
+            <div class="rank-badge">#13</div>
+            <div class="card-info">
+                <h3 title="海大泡脚桶 古风水墨版">海大泡脚桶 古风水墨版</h3>
+                <div class="card-meta">
+                    <span>📊 ROI <strong style="color:var(--accent-gold)">1.66</strong></span>
+                    <span>· 古风水墨人物+5条泡脚知识点+反面案例警示，知识科普型内容。</span>
+                </div>
+            </div>
+        </div>
+        <span class="brand-tag brand-海大" style="display:none">海大</span>
+        <span class="type-tag type-产品展示">产品展示</span>
+    </div>
+    <div class="metrics-bar">
+        <div class="metric-item">
+            <span class="metric-label">CTR</span>
+            <span class="metric-value">3.22<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CVR</span>
+            <span class="metric-value">10.21<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">ROI</span>
+            <span class="metric-value">1.66</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CPM</span>
+            <span class="metric-value">¥72</span>
+        </div>
+    </div>
+    
+<div class="card-frames" data-md5="42266344e4">
+    <img class="frame-img active" data-idx="0" src="frames/42266344e4/42266344e4_1_t0.5s.jpg" alt="frame-1"><img class="frame-img" data-idx="1" src="frames/42266344e4/42266344e4_2_t3.0s.jpg" alt="frame-2"><img class="frame-img" data-idx="2" src="frames/42266344e4/42266344e4_3_t29.0s.jpg" alt="frame-3"><img class="frame-img" data-idx="3" src="frames/42266344e4/42266344e4_4_t58.1s.jpg" alt="frame-4"><img class="frame-img" data-idx="4" src="frames/42266344e4/42266344e4_5_t87.1s.jpg" alt="frame-5"><img class="frame-img" data-idx="5" src="frames/42266344e4/42266344e4_6_t104.5s.jpg" alt="frame-6">
+    <video class="frame-video" src="videos/42266344e4.mp4" preload="none" playsinline controls></video>
+    <button class="play-btn" type="button" aria-label="播放视频"><span class="play-icon">▶</span><span>播放原片</span></button>
+    <button class="close-btn" type="button" aria-label="关闭视频">×</button>
+    <div class="video-tip">关键帧轮播</div>
+    <div class="frame-counter">1/6</div>
+    <div class="frame-timestamp">—</div>
+</div>
+    <div class="card-body">
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <div class="section-title">黄金 5 段式拆解</div>
+            </div>
+            <div class="sop-segment hook">
+                <div class="seg-label">钩子 0-3s</div>
+                <div class="seg-text">古风水墨人物泡脚+大字'为什么泡脚不能在睡前去泡呢？'+⚠️警告符号——反常识提问制造悬念，目标用户是养生一族。</div>
+            </div>
+            <div class="sop-segment pain">
+                <div class="seg-label">痛点 3-10s</div>
+                <div class="seg-text">5条泡脚关键点字幕（时间8-9点/时长15-20分钟/温度40-45度/水位没过脚踝/加料枸杞老姜花椒）——知识缺口建立专业感。</div>
+            </div>
+            <div class="sop-segment solution">
+                <div class="seg-label">解药 10-25s</div>
+                <div class="seg-text">'折叠保温泡脚桶'+家用折叠泡脚桶产品自然植入，最后一行字幕作为'终极答案'。</div>
+            </div>
+            <div class="sop-segment demo">
+                <div class="seg-label">演示 25-90s</div>
+                <div class="seg-text">足浴包特写+三合一功能（熏/蒸/泡）+美甲店办公室多场景+反面案例红叉警示——立体化产品教育。</div>
+            </div>
+            <div class="sop-segment end">
+                <div class="seg-label">收尾 90s+</div>
+                <div class="seg-text">'危险动作请勿模仿'安全提示+阳光图标+产品三合一 CTA——风险反衬+安全承诺双重收尾。</div>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <div class="section-title">结构流程</div>
+            </div>
+            <div class="flow-structure">
+                <span class="flow-step emphasis">钩子 0-3s</span><span class="flow-arrow">→</span><span class="flow-step ">痛点 3-10s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">解药 10-25s</span><span class="flow-arrow">→</span><span class="flow-step ">演示 25-90s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">收尾 90s+</span>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🏷️</div>
+                <div class="section-title">关键特征</div>
+            </div>
+            <div class="tags-container">
+                <span class="tag feigaoxiao">知识科普</span>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="analysis-card" data-md5="7f29126905" data-brand="初代" data-type="产品展示">
+    <div class="card-header">
+        <div class="card-rank">
+            <div class="rank-badge">#14</div>
+            <div class="card-info">
+                <h3 title="初代肚脐贴 脂肪动画版">初代肚脐贴 脂肪动画版</h3>
+                <div class="card-meta">
+                    <span>📊 ROI <strong style="color:var(--accent-gold)">1.62</strong></span>
+                    <span>· 脂肪堆积动画+28种草本药材+美女贴敷展示，CVR 最高 2...</span>
+                </div>
+            </div>
+        </div>
+        <span class="brand-tag brand-初代" style="display:none">初代</span>
+        <span class="type-tag type-产品展示">产品展示</span>
+    </div>
+    <div class="metrics-bar">
+        <div class="metric-item">
+            <span class="metric-label">CTR</span>
+            <span class="metric-value">2.36<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CVR</span>
+            <span class="metric-value">20.16<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">ROI</span>
+            <span class="metric-value">1.62</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CPM</span>
+            <span class="metric-value">¥364</span>
+        </div>
+    </div>
+    
+<div class="card-frames" data-md5="7f29126905">
+    <img class="frame-img active" data-idx="0" src="frames/7f29126905/7f29126905_1_t0.5s.jpg" alt="frame-1"><img class="frame-img" data-idx="1" src="frames/7f29126905/7f29126905_2_t3.0s.jpg" alt="frame-2"><img class="frame-img" data-idx="2" src="frames/7f29126905/7f29126905_3_t12.7s.jpg" alt="frame-3"><img class="frame-img" data-idx="3" src="frames/7f29126905/7f29126905_4_t25.5s.jpg" alt="frame-4"><img class="frame-img" data-idx="4" src="frames/7f29126905/7f29126905_5_t38.2s.jpg" alt="frame-5"><img class="frame-img" data-idx="5" src="frames/7f29126905/7f29126905_6_t45.9s.jpg" alt="frame-6">
+    <video class="frame-video" src="videos/7f29126905.mp4" preload="none" playsinline controls></video>
+    <button class="play-btn" type="button" aria-label="播放视频"><span class="play-icon">▶</span><span>播放原片</span></button>
+    <button class="close-btn" type="button" aria-label="关闭视频">×</button>
+    <div class="video-tip">关键帧轮播</div>
+    <div class="frame-counter">1/6</div>
+    <div class="frame-timestamp">—</div>
+</div>
+    <div class="card-body">
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <div class="section-title">黄金 5 段式拆解</div>
+            </div>
+            <div class="sop-segment hook">
+                <div class="seg-label">钩子 0-3s</div>
+                <div class="seg-text">紫色短裤+黄色脂肪颗粒+红色箭头'你宁愿变成这样'——视觉冲击+恐惧诉求，目标人群腹部肥胖用户。</div>
+            </div>
+            <div class="sop-segment pain">
+                <div class="seg-label">痛点 3-10s</div>
+                <div class="seg-text">脂肪堆积画面+字幕'剧情演绎'——明确告知是演绎内容，建立可信度。</div>
+            </div>
+            <div class="sop-segment solution">
+                <div class="seg-label">解药 10-25s</div>
+                <div class="seg-text">28种草本药材（蕲艾/茯苓等）+红花/药材柜分层展示——28味组方教育建立'专业感+道地药材'信任。</div>
+            </div>
+            <div class="sop-segment demo">
+                <div class="seg-label">演示 25-90s</div>
+                <div class="seg-text">黑色吊带美女手持肚脐贴+橙色包装+字幕'市面真材实料'——真人实证+品质承诺。</div>
+            </div>
+            <div class="sop-segment end">
+                <div class="seg-label">收尾 90s+</div>
+                <div class="seg-text">'剧情演绎'再次声明+ AI 技术使用提示——合规+安全收尾。</div>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <div class="section-title">结构流程</div>
+            </div>
+            <div class="flow-structure">
+                <span class="flow-step emphasis">钩子 0-3s</span><span class="flow-arrow">→</span><span class="flow-step ">痛点 3-10s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">解药 10-25s</span><span class="flow-arrow">→</span><span class="flow-step ">演示 25-90s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">收尾 90s+</span>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🏷️</div>
+                <div class="section-title">关键特征</div>
+            </div>
+            <div class="tags-container">
+                <span class="tag feigaoxiao">产品展示</span><span class="tag gaoxiao">黄金5段</span>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="analysis-card" data-md5="bb14cf61f6" data-brand="好视力" data-type="产品展示">
+    <div class="card-header">
+        <div class="card-rank">
+            <div class="rank-badge">#15</div>
+            <div class="card-info">
+                <h3 title="好视力护眼贴">好视力护眼贴</h3>
+                <div class="card-meta">
+                    <span>📊 ROI <strong style="color:var(--accent-gold)">1.61</strong></span>
+                    <span>· 免费体验钩子+本草眼贴场景。</span>
+                </div>
+            </div>
+        </div>
+        <span class="brand-tag brand-好视力" style="display:none">好视力</span>
+        <span class="type-tag type-产品展示">产品展示</span>
+    </div>
+    <div class="metrics-bar">
+        <div class="metric-item">
+            <span class="metric-label">CTR</span>
+            <span class="metric-value">2.79<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CVR</span>
+            <span class="metric-value">17.97<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">ROI</span>
+            <span class="metric-value">1.61</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CPM</span>
+            <span class="metric-value">¥307</span>
+        </div>
+    </div>
+    
+<div class="card-frames" data-md5="bb14cf61f6">
+    <img class="frame-img active" data-idx="0" src="frames/bb14cf61f6/bb14cf61f6_1_t0.5s.jpg" alt="frame-1"><img class="frame-img" data-idx="1" src="frames/bb14cf61f6/bb14cf61f6_2_t3.0s.jpg" alt="frame-2"><img class="frame-img" data-idx="2" src="frames/bb14cf61f6/bb14cf61f6_3_t18.3s.jpg" alt="frame-3"><img class="frame-img" data-idx="3" src="frames/bb14cf61f6/bb14cf61f6_4_t36.6s.jpg" alt="frame-4"><img class="frame-img" data-idx="4" src="frames/bb14cf61f6/bb14cf61f6_5_t54.9s.jpg" alt="frame-5"><img class="frame-img" data-idx="5" src="frames/bb14cf61f6/bb14cf61f6_6_t65.9s.jpg" alt="frame-6">
+    <video class="frame-video" src="videos/bb14cf61f6.mp4" preload="none" playsinline controls></video>
+    <button class="play-btn" type="button" aria-label="播放视频"><span class="play-icon">▶</span><span>播放原片</span></button>
+    <button class="close-btn" type="button" aria-label="关闭视频">×</button>
+    <div class="video-tip">关键帧轮播</div>
+    <div class="frame-counter">1/6</div>
+    <div class="frame-timestamp">—</div>
+</div>
+    <div class="card-body">
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <div class="section-title">黄金 5 段式拆解</div>
+            </div>
+            <div class="sop-segment hook">
+                <div class="seg-label">钩子 0-3s</div>
+                <div class="seg-text">'每天贴敷10分钟 清亮的好像变年轻了'——使用时长钩子+效果承诺。</div>
+            </div>
+            <div class="sop-segment pain">
+                <div class="seg-label">痛点 3-10s</div>
+                <div class="seg-text">'免费体验'角标——降低决策门槛。</div>
+            </div>
+            <div class="sop-segment solution">
+                <div class="seg-label">解药 10-25s</div>
+                <div class="seg-text">本草眼贴+黄色菊花包装——草本定位。</div>
+            </div>
+            <div class="sop-segment demo">
+                <div class="seg-label">演示 25-90s</div>
+                <div class="seg-text">卡通老人贴敷场景+618活动——节气+大促双钩子。</div>
+            </div>
+            <div class="sop-segment end">
+                <div class="seg-label">收尾 90s+</div>
+                <div class="seg-text">'对不起'大字幕+多位美女举牌——群体效应+戏剧反转。</div>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <div class="section-title">结构流程</div>
+            </div>
+            <div class="flow-structure">
+                <span class="flow-step emphasis">钩子 0-3s</span><span class="flow-arrow">→</span><span class="flow-step ">痛点 3-10s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">解药 10-25s</span><span class="flow-arrow">→</span><span class="flow-step ">演示 25-90s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">收尾 90s+</span>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🏷️</div>
+                <div class="section-title">关键特征</div>
+            </div>
+            <div class="tags-container">
+                <span class="tag feigaoxiao">多场景</span>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="analysis-card" data-md5="8d3a05e458" data-brand="古宛堂" data-type="工厂溯源">
+    <div class="card-header">
+        <div class="card-rank">
+            <div class="rank-badge">#16</div>
+            <div class="card-info">
+                <h3 title="古宛堂姜黄舒足贴·老板权威背书">古宛堂姜黄舒足贴·老板权威背书</h3>
+                <div class="card-meta">
+                    <span>📊 ROI <strong style="color:var(--accent-gold)">1.55</strong></span>
+                    <span>· 权威专家型第一人称背书，工厂源头直供建立信任。</span>
+                </div>
+            </div>
+        </div>
+        <span class="brand-tag brand-古宛堂" style="display:none">古宛堂</span>
+        <span class="type-tag type-工厂溯源">工厂溯源</span>
+    </div>
+    <div class="metrics-bar">
+        <div class="metric-item">
+            <span class="metric-label">CTR</span>
+            <span class="metric-value">2.81<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CVR</span>
+            <span class="metric-value">13.19<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">ROI</span>
+            <span class="metric-value">1.55</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CPM</span>
+            <span class="metric-value">¥257</span>
+        </div>
+    </div>
+    
+<div class="card-frames" data-md5="8d3a05e458">
+    <img class="frame-img active" data-idx="0" src="frames/8d3a05e458/8d3a05e458_1_t0.5s.jpg" alt="frame-1"><img class="frame-img" data-idx="1" src="frames/8d3a05e458/8d3a05e458_2_t3.0s.jpg" alt="frame-2"><img class="frame-img" data-idx="2" src="frames/8d3a05e458/8d3a05e458_3_t24.0s.jpg" alt="frame-3"><img class="frame-img" data-idx="3" src="frames/8d3a05e458/8d3a05e458_4_t48.0s.jpg" alt="frame-4"><img class="frame-img" data-idx="4" src="frames/8d3a05e458/8d3a05e458_5_t72.1s.jpg" alt="frame-5"><img class="frame-img" data-idx="5" src="frames/8d3a05e458/8d3a05e458_6_t86.5s.jpg" alt="frame-6">
+    <video class="frame-video" src="videos/8d3a05e458.mp4" preload="none" playsinline controls></video>
+    <button class="play-btn" type="button" aria-label="播放视频"><span class="play-icon">▶</span><span>播放原片</span></button>
+    <button class="close-btn" type="button" aria-label="关闭视频">×</button>
+    <div class="video-tip">关键帧轮播</div>
+    <div class="frame-counter">1/6</div>
+    <div class="frame-timestamp">—</div>
+</div>
+    <div class="card-body">
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <div class="section-title">黄金 5 段式拆解</div>
+            </div>
+            <div class="sop-segment hook">
+                <div class="seg-label">钩子 0-3s</div>
+                <div class="seg-text">西装革履老板+字幕'哪里买足贴才是正品'——痛点问题前置，直接问'哪里买才是正品'，锚定正品焦虑。</div>
+            </div>
+            <div class="sop-segment pain">
+                <div class="seg-label">痛点 3-10s</div>
+                <div class="seg-text">'哪里有那么贵的'——价格对比痛点。</div>
+            </div>
+            <div class="sop-segment solution">
+                <div class="seg-label">解药 10-25s</div>
+                <div class="seg-text">'古宛堂姜黄舒足贴啊'+5盒产品堆叠——'工厂源头 直供'字幕强化信任。</div>
+            </div>
+            <div class="sop-segment demo">
+                <div class="seg-label">演示 25-90s</div>
+                <div class="seg-text">美女穿睡衣贴足贴场景+足部特写——多模特居家使用场景展示。</div>
+            </div>
+            <div class="sop-segment end">
+                <div class="seg-label">收尾 90s+</div>
+                <div class="seg-text">'满意了再留下'——试用承诺CTA，降低决策门槛。</div>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <div class="section-title">结构流程</div>
+            </div>
+            <div class="flow-structure">
+                <span class="flow-step emphasis">钩子 0-3s</span><span class="flow-arrow">→</span><span class="flow-step ">痛点 3-10s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">解药 10-25s</span><span class="flow-arrow">→</span><span class="flow-step ">演示 25-90s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">收尾 90s+</span>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🏷️</div>
+                <div class="section-title">关键特征</div>
+            </div>
+            <div class="tags-container">
+                <span class="tag feigaoxiao">工厂溯源</span>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="analysis-card" data-md5="ed37944d03" data-brand="初代" data-type="产品展示">
+    <div class="card-header">
+        <div class="card-rank">
+            <div class="rank-badge">#17</div>
+            <div class="card-info">
+                <h3 title="这种肚子最好调">这种肚子最好调</h3>
+                <div class="card-meta">
+                    <span>📊 ROI <strong style="color:var(--accent-gold)">1.45</strong></span>
+                    <span>· 腹部特写+痛点直击型内容，CVR最高(20.16%)。</span>
+                </div>
+            </div>
+        </div>
+        <span class="brand-tag brand-初代" style="display:none">初代</span>
+        <span class="type-tag type-产品展示">产品展示</span>
+    </div>
+    <div class="metrics-bar">
+        <div class="metric-item">
+            <span class="metric-label">CTR</span>
+            <span class="metric-value">2.15<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CVR</span>
+            <span class="metric-value">13.51<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">ROI</span>
+            <span class="metric-value">1.45</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CPM</span>
+            <span class="metric-value">¥249</span>
+        </div>
+    </div>
+    
+<div class="card-frames" data-md5="ed37944d03">
+    <img class="frame-img active" data-idx="0" src="frames/ed37944d03/ed37944d03_1_t0.5s.jpg" alt="frame-1"><img class="frame-img" data-idx="1" src="frames/ed37944d03/ed37944d03_2_t3.0s.jpg" alt="frame-2"><img class="frame-img" data-idx="2" src="frames/ed37944d03/ed37944d03_3_t13.9s.jpg" alt="frame-3"><img class="frame-img" data-idx="3" src="frames/ed37944d03/ed37944d03_4_t27.8s.jpg" alt="frame-4"><img class="frame-img" data-idx="4" src="frames/ed37944d03/ed37944d03_5_t41.7s.jpg" alt="frame-5"><img class="frame-img" data-idx="5" src="frames/ed37944d03/ed37944d03_6_t50.0s.jpg" alt="frame-6">
+    <video class="frame-video" src="videos/ed37944d03.mp4" preload="none" playsinline controls></video>
+    <button class="play-btn" type="button" aria-label="播放视频"><span class="play-icon">▶</span><span>播放原片</span></button>
+    <button class="close-btn" type="button" aria-label="关闭视频">×</button>
+    <div class="video-tip">关键帧轮播</div>
+    <div class="frame-counter">1/6</div>
+    <div class="frame-timestamp">—</div>
+</div>
+    <div class="card-body">
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <div class="section-title">黄金 5 段式拆解</div>
+            </div>
+            <div class="sop-segment hook">
+                <div class="seg-label">钩子 0-3s</div>
+                <div class="seg-text">'这种肚子最好调 这个视频一定要看完'——黄色字幕'反向悬念'+腹部特写直接建立目标用户。</div>
+            </div>
+            <div class="sop-segment pain">
+                <div class="seg-label">痛点 3-10s</div>
+                <div class="seg-text">'跟我一样讨厌这里鼓鼓的'——共情痛点。</div>
+            </div>
+            <div class="sop-segment solution">
+                <div class="seg-label">解药 10-25s</div>
+                <div class="seg-text">男士腹部对比图——前后效果对比。</div>
+            </div>
+            <div class="sop-segment demo">
+                <div class="seg-label">演示 25-90s</div>
+                <div class="seg-text">厦门食博会参展+创始人讲解——权威性+展会背书。</div>
+            </div>
+            <div class="sop-segment end">
+                <div class="seg-label">收尾 90s+</div>
+                <div class="seg-text">'再买植物大师艾绒肚脐贴'——品牌CTA。</div>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <div class="section-title">结构流程</div>
+            </div>
+            <div class="flow-structure">
+                <span class="flow-step emphasis">钩子 0-3s</span><span class="flow-arrow">→</span><span class="flow-step ">痛点 3-10s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">解药 10-25s</span><span class="flow-arrow">→</span><span class="flow-step ">演示 25-90s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">收尾 90s+</span>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🏷️</div>
+                <div class="section-title">关键特征</div>
+            </div>
+            <div class="tags-container">
+                <span class="tag feigaoxiao">产品展示</span><span class="tag gaoxiao">黄金5段</span>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="analysis-card" data-md5="394a32760a" data-brand="古宛堂" data-type="场景演绎">
+    <div class="card-header">
+        <div class="card-rank">
+            <div class="rank-badge">#18</div>
+            <div class="card-info">
+                <h3 title="古宛堂舒足贴 睡前场景">古宛堂舒足贴 睡前场景</h3>
+                <div class="card-meta">
+                    <span>📊 ROI <strong style="color:var(--accent-gold)">1.31</strong></span>
+                    <span>· 美女穿睡衣睡前使用舒足贴。</span>
+                </div>
+            </div>
+        </div>
+        <span class="brand-tag brand-古宛堂" style="display:none">古宛堂</span>
+        <span class="type-tag type-场景演绎">场景演绎</span>
+    </div>
+    <div class="metrics-bar">
+        <div class="metric-item">
+            <span class="metric-label">CTR</span>
+            <span class="metric-value">1.90<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CVR</span>
+            <span class="metric-value">15.29<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">ROI</span>
+            <span class="metric-value">1.31</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CPM</span>
+            <span class="metric-value">¥223</span>
+        </div>
+    </div>
+    
+<div class="card-frames" data-md5="394a32760a">
+    <img class="frame-img active" data-idx="0" src="frames/394a32760a/394a32760a_1_t0.5s.jpg" alt="frame-1"><img class="frame-img" data-idx="1" src="frames/394a32760a/394a32760a_2_t3.0s.jpg" alt="frame-2"><img class="frame-img" data-idx="2" src="frames/394a32760a/394a32760a_3_t29.4s.jpg" alt="frame-3"><img class="frame-img" data-idx="3" src="frames/394a32760a/394a32760a_4_t58.9s.jpg" alt="frame-4"><img class="frame-img" data-idx="4" src="frames/394a32760a/394a32760a_5_t88.3s.jpg" alt="frame-5"><img class="frame-img" data-idx="5" src="frames/394a32760a/394a32760a_6_t106.0s.jpg" alt="frame-6">
+    <video class="frame-video" src="videos/394a32760a.mp4" preload="none" playsinline controls></video>
+    <button class="play-btn" type="button" aria-label="播放视频"><span class="play-icon">▶</span><span>播放原片</span></button>
+    <button class="close-btn" type="button" aria-label="关闭视频">×</button>
+    <div class="video-tip">关键帧轮播</div>
+    <div class="frame-counter">1/6</div>
+    <div class="frame-timestamp">—</div>
+</div>
+    <div class="card-body">
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <div class="section-title">黄金 5 段式拆解</div>
+            </div>
+            <div class="sop-segment hook">
+                <div class="seg-label">钩子 0-3s</div>
+                <div class="seg-text">'不知不觉得睡个安稳觉'——睡眠痛点+产品效果。</div>
+            </div>
+            <div class="sop-segment pain">
+                <div class="seg-label">痛点 3-10s</div>
+                <div class="seg-text">'睡不好'——失眠人群痛点。</div>
+            </div>
+            <div class="sop-segment solution">
+                <div class="seg-label">解药 10-25s</div>
+                <div class="seg-text">足贴贴脚底特写——产品使用场景。</div>
+            </div>
+            <div class="sop-segment demo">
+                <div class="seg-label">演示 25-90s</div>
+                <div class="seg-text">足部贴敷过程——使用流程。</div>
+            </div>
+            <div class="sop-segment end">
+                <div class="seg-label">收尾 90s+</div>
+                <div class="seg-text">'正是养好我们自己的好时候'——时令+自我关怀CTA。</div>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <div class="section-title">结构流程</div>
+            </div>
+            <div class="flow-structure">
+                <span class="flow-step emphasis">钩子 0-3s</span><span class="flow-arrow">→</span><span class="flow-step ">痛点 3-10s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">解药 10-25s</span><span class="flow-arrow">→</span><span class="flow-step ">演示 25-90s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">收尾 90s+</span>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🏷️</div>
+                <div class="section-title">关键特征</div>
+            </div>
+            <div class="tags-container">
+                <span class="tag feigaoxiao">睡前场景</span>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="analysis-card" data-md5="65589d5516" data-brand="古宛堂" data-type="场景演绎">
+    <div class="card-header">
+        <div class="card-rank">
+            <div class="rank-badge">#19</div>
+            <div class="card-info">
+                <h3 title="古宛堂舒足贴 卧室场景">古宛堂舒足贴 卧室场景</h3>
+                <div class="card-meta">
+                    <span>📊 ROI <strong style="color:var(--accent-gold)">1.25</strong></span>
+                    <span>· 卧室睡衣美女贴敷场景。</span>
+                </div>
+            </div>
+        </div>
+        <span class="brand-tag brand-古宛堂" style="display:none">古宛堂</span>
+        <span class="type-tag type-场景演绎">场景演绎</span>
+    </div>
+    <div class="metrics-bar">
+        <div class="metric-item">
+            <span class="metric-label">CTR</span>
+            <span class="metric-value">2.51<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CVR</span>
+            <span class="metric-value">12.06<small>%</small></span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">ROI</span>
+            <span class="metric-value">1.25</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+            <span class="metric-label">CPM</span>
+            <span class="metric-value">¥224</span>
+        </div>
+    </div>
+    
+<div class="card-frames" data-md5="65589d5516">
+    <img class="frame-img active" data-idx="0" src="frames/65589d5516/65589d5516_1_t0.5s.jpg" alt="frame-1"><img class="frame-img" data-idx="1" src="frames/65589d5516/65589d5516_2_t3.0s.jpg" alt="frame-2"><img class="frame-img" data-idx="2" src="frames/65589d5516/65589d5516_3_t32.8s.jpg" alt="frame-3"><img class="frame-img" data-idx="3" src="frames/65589d5516/65589d5516_4_t65.7s.jpg" alt="frame-4"><img class="frame-img" data-idx="4" src="frames/65589d5516/65589d5516_5_t98.5s.jpg" alt="frame-5"><img class="frame-img" data-idx="5" src="frames/65589d5516/65589d5516_6_t118.2s.jpg" alt="frame-6">
+    <video class="frame-video" src="videos/65589d5516.mp4" preload="none" playsinline controls></video>
+    <button class="play-btn" type="button" aria-label="播放视频"><span class="play-icon">▶</span><span>播放原片</span></button>
+    <button class="close-btn" type="button" aria-label="关闭视频">×</button>
+    <div class="video-tip">关键帧轮播</div>
+    <div class="frame-counter">1/6</div>
+    <div class="frame-timestamp">—</div>
+</div>
+    <div class="card-body">
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <div class="section-title">黄金 5 段式拆解</div>
+            </div>
+            <div class="sop-segment hook">
+                <div class="seg-label">钩子 0-3s</div>
+                <div class="seg-text">美女穿睡衣坐在床上+品牌LOGO——'美女+品牌'的快划率优势组合。</div>
+            </div>
+            <div class="sop-segment pain">
+                <div class="seg-label">痛点 3-10s</div>
+                <div class="seg-text">'舒足贴'字幕——产品直白。</div>
+            </div>
+            <div class="sop-segment solution">
+                <div class="seg-label">解药 10-25s</div>
+                <div class="seg-text">品牌礼盒+多SKU——商品矩阵。</div>
+            </div>
+            <div class="sop-segment demo">
+                <div class="seg-label">演示 25-90s</div>
+                <div class="seg-text">足部贴敷+床品场景——使用场景化。</div>
+            </div>
+            <div class="sop-segment end">
+                <div class="seg-label">收尾 90s+</div>
+                <div class="seg-text">'正是养好我们自己的好时候'——时令CTA。</div>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <div class="section-title">结构流程</div>
+            </div>
+            <div class="flow-structure">
+                <span class="flow-step emphasis">钩子 0-3s</span><span class="flow-arrow">→</span><span class="flow-step ">痛点 3-10s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">解药 10-25s</span><span class="flow-arrow">→</span><span class="flow-step ">演示 25-90s</span><span class="flow-arrow">→</span><span class="flow-step emphasis">收尾 90s+</span>
+            </div>
+        </div>
+        <div class="analysis-section">
+            <div class="section-header">
+                <div class="section-icon">🏷️</div>
+                <div class="section-title">关键特征</div>
+            </div>
+            <div class="tags-container">
+                <span class="tag feigaoxiao">多场景</span><span class="tag feigaoxiao">睡前场景</span>
+            </div>
+        </div>
+    </div>
+</article>
+
+    </div>
+</section>
+
+        <div class="footer">
+            © 2026 日用百货素材分析系统 · 基于 19 视频实测 · 黄金5段式 × 创意SOP方法论
+        </div>
+    </div>
+    <script>
+// 关键帧轮播 + 视频播放
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.card-frames').forEach(function(container) {
+        var imgs = container.querySelectorAll('.frame-img');
+        var video = container.querySelector('.frame-video');
+        var playBtn = container.querySelector('.play-btn');
+        var closeBtn = container.querySelector('.close-btn');
+        var counter = container.querySelector('.frame-counter');
+        var ts = container.querySelector('.frame-timestamp');
+        var tip = container.querySelector('.video-tip');
+        var current = 0;
+        var paused = false;
+        var interval = setInterval(function() {
+            if (paused) return;
+            if (!imgs.length) return;
+            imgs[current].classList.remove('active');
+            current = (current + 1) % imgs.length;
+            imgs[current].classList.add('active');
+            if (counter) counter.textContent = (current+1) + '/' + imgs.length;
+            if (ts) {
+                var src = imgs[current].getAttribute('src');
+                var m = src.match(/t([\d.]+)s/);
+                ts.textContent = m ? m[1] + 's' : '—';
+            }
+        }, 3000);
+        container.addEventListener('mouseenter', function() { paused = true; });
+        container.addEventListener('mouseleave', function() { paused = false; });
+
+        // 播放按钮：切换到视频并自动播放
+        if (playBtn && video) {
+            playBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                container.classList.add('playing');
+                paused = true;
+                // 强制加载（preload=none 时点击才下载）
+                video.load();
+                var p = video.play();
+                if (p && p.catch) p.catch(function(err) { console.warn('autoplay blocked:', err); });
+                if (tip) tip.style.display = 'none';
+            });
+        }
+        // 关闭按钮：停止视频，回到关键帧轮播
+        if (closeBtn && video) {
+            closeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                video.pause();
+                try { video.currentTime = 0; } catch (e) {}
+                container.classList.remove('playing');
+                paused = false;
+                if (tip) tip.style.display = '';
+            });
+        }
+        // 视频结束自动关闭
+        if (video) {
+            video.addEventListener('ended', function() {
+                container.classList.remove('playing');
+                paused = false;
+                if (tip) tip.style.display = '';
+            });
+        }
+    });
+});
+
+// 筛选联动
+function applyFilter() {
+    var cust = document.getElementById('filterCust').value;
+    var type = document.getElementById('filterType').value;
+    var aud = document.getElementById('filterAud').value;
+    var cards = document.querySelectorAll('.analysis-card');
+    var visible = 0;
+    cards.forEach(function(card) {
+        var show = true;
+        if (cust && card.getAttribute('data-brand') !== cust) show = false;
+        if (type && card.getAttribute('data-type') !== type) show = false;
+        // 人群筛选暂用品牌+类型代理
+        if (aud) {
+            var brand = card.getAttribute('data-brand');
+            var type2 = card.getAttribute('data-type');
+            var audMap = {
+                '上班族': ['蜗艾蜗家', '海大'],
+                '家庭用户': ['植物大师', '古宛堂', '好视力'],
+                '银发族': ['内蒙古敦布仁钦', '好视力'],
+                '带娃妈妈': ['植物大师', '古宛堂', '初代'],
+                '养生一族': ['蜗艾蜗家', '内蒙古敦布仁钦', '初代'],
+            };
+            var allowed = audMap[aud] || [];
+            if (aud && allowed.indexOf(brand) === -1 && aud !== '') {
+                // 暂不强过滤人群
+            }
+        }
+        if (show) {
+            card.classList.remove('hidden');
+            visible++;
+        } else {
+            card.classList.add('hidden');
+        }
+    });
+    document.getElementById('filterCount').textContent = visible;
+}
+</script>
+</body>
+</html>
